@@ -89,28 +89,49 @@ added 95 packages in 45s
 
 ---
 
-## 🚀 Paso 4: Iniciar la Aplicación
+### 🚀 Paso 4: Iniciar la Aplicación
 
-Ejecuta este comando:
+Debido a que el proyecto utiliza un **Backend** para la generación de imágenes con Imagen 4.0, necesitamos abrir **dos terminales**.
 
-```bash
-npm run dev
-```
+#### Terminal 1: Frontend (La interfaz visual)
+1. En la carpeta raíz del proyecto, ejecuta:
+   ```bash
+   npm run dev
+   ```
+2. Esto iniciará la aplicación en `http://localhost:5173`.
 
-**¿Qué hace esto?**
-Inicia un servidor local donde podrás ver la aplicación en tu navegador.
-
-**Verás algo como:**
-```
-  VITE v7.2.4  ready in 500 ms
-
-  ➜  Local:   http://localhost:5173/
-  ➜  Network: use --host to expose
-```
+#### Terminal 2: Backend (El motor de IA)
+1. Abre una **nueva ventana de terminal** en la misma carpeta del proyecto.
+2. Entra a la carpeta backend:
+   ```bash
+   cd backend
+   ```
+3. Instala las dependencias del backend (solo la primera vez):
+   ```bash
+   npm install
+   ```
+4. Inicia el servidor de IA:
+   ```bash
+   node server.js
+   ```
+5. Verás el mensaje: `🚀 Servidor de Branding corriendo en http://localhost:5000`.
 
 ---
 
-## 🌐 Paso 5: Abrir en el Navegador
+## ☁️ Paso 5: Ejecutar directamente desde GitHub (Codespaces)
+
+Si no quieres instalar nada en tu computadora, puedes usar **GitHub Codespaces**:
+
+1. Ve a tu repositorio en GitHub.
+2. Haz clic en el botón verde **"<> Code"**.
+3. Selecciona la pestaña **"Codespaces"** y haz clic en **"Create codespace on main"**.
+4. Se abrirá un editor en tu navegador.
+5. Abre dos terminales abajo y sigue los mismos pasos del **Paso 4** (Terminal 1 y Terminal 2).
+6. GitHub te dará enlaces públicos temporales para ver la app.
+
+---
+
+## 🌐 Paso 6: Abrir en el Navegador
 
 1. Abre tu navegador (Chrome, Firefox, Edge, Safari)
 2. Ve a la dirección: **http://localhost:5173/**
@@ -210,7 +231,10 @@ La próxima vez que quieras usar la aplicación:
 3. Asegúrate de tener conexión a internet
 
 ### Los proyectos desaparecen al cerrar la app
-**Solución:** Esto es normal, por ahora se guardan en localStorage (navegador). Para guardarlos permanentemente, necesitarás un backend (fase futura).
+**Solución:** Esto es normal, se guardan en el almacenamiento local de tu navegador (localStorage).
+
+### Error 500 al generar imágenes
+**Solución:** Asegúrate de que la **Terminal 2 (Backend)** esté corriendo. Si el backend no está encendido, la app no podrá generar imágenes reales y verás un error.
 
 ---
 
