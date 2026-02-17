@@ -31,8 +31,17 @@ El servidor escuchará en: `http://localhost:5000`
 - `verify-backend.js`: Script de prueba de extremo a extremo para el backend.
 
 ## 🔑 Configuración
-Crea un archivo `.env` en esta carpeta con:
-```env
-GEMINI_API_KEY=tu_clave_aqui
-GOOGLE_IMAGEN_API_KEY=tu_clave_aqui (opcional, si es diferente a la de Gemini)
-```
+Crea un archivo `.env` en esta carpeta. **Importante**: El archivo `.env` NO está en el repositorio por seguridad (para proteger tus llaves). 
+
+### Cómo crearlo en Codespaces (Sin usar caracteres especiales):
+Si no puedes usar el símbolo `>` en tu teclado, sigue estos pasos:
+1. En el panel izquierdo de Codespaces, haz clic derecho sobre la carpeta `backend`.
+2. Selecciona **"New File"**.
+3. Ponle de nombre exactamente: `.env`
+4. Pega este contenido dentro del archivo:
+   ```env
+   GEMINI_API_KEY=tu_clave_aqui
+   ```
+5. Guarda el archivo (**Ctrl+S**).
+
+## 📁 Estructura
