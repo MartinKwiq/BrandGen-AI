@@ -66,7 +66,7 @@
 ### 1. API Key de Google AI Studio
 Tu API Key actual:
 ```
-AIzaSyCUs0r_RGNUNqhOJLxK8K4dQTT6bh25Zr8
+
 ```
 
 Si no funciona, genera una nueva en:
