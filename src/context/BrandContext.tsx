@@ -1,10 +1,10 @@
-import { createContext, useContext, useState, useCallback, ReactNode, useRef } from 'react';
+import { createContext, useContext, useState, useCallback, ReactNode, useRef, useEffect } from 'react';
 import type { BrandProject, Message } from '../types';
-import { 
-  generateBranding, 
-  getAIResponse, 
-  saveProject, 
-  getProjects, 
+import {
+  generateBranding,
+  getAIResponse,
+  saveProject,
+  getProjects,
   deleteProject as deleteProjectService,
   generateId,
   generateContextSummary,
@@ -29,12 +29,25 @@ interface BrandContextType {
 const BrandContext = createContext<BrandContextType | null>(null);
 
 export function BrandProvider({ children }: { children: ReactNode }) {
-  const [projects, setProjects] = useState<BrandProject[]>(() => getProjects());
+  const [projects, setProjects] = useState<BrandProject[]>([]);
   const [currentProject, setCurrentProject] = useState<BrandProject | null>(null);
+
+  // Load projects on mount
+  useEffect(() => {
+    const loadProjects = async () => {
+      try {
+        const loadedProjects = await getProjects();
+        setProjects(loadedProjects);
+      } catch (error) {
+        console.error('❌ Error loading projects:', error);
+      }
+    };
+    loadProjects();
+  }, []);
   const [isLoading, setIsLoading] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [aiReady] = useState(isAIInitialized());
-  
+
   // Track conversation state to avoid repetition
   const conversationPhase = useRef<'values' | 'audience' | 'style' | 'complete'>('values');
   const askedTopics = useRef<Set<string>>(new Set());
@@ -45,7 +58,7 @@ export function BrandProvider({ children }: { children: ReactNode }) {
       // Reset conversation state
       conversationPhase.current = 'values';
       askedTopics.current = new Set();
-      
+
       const newProject: BrandProject = {
         id: generateId(),
         name,
@@ -57,13 +70,13 @@ export function BrandProvider({ children }: { children: ReactNode }) {
           {
             id: generateId(),
             role: 'assistant',
-            content: `¡Hola! Soy BrandGen AI, tu asistente de branding. Cuéntame más sobre ${name}. ¿Cuál es la misión de tu empresa y qué valores quieres transmitir a tus clientes?`,
+            content: `¡Hola! Soy BrandGen AI, tu consultor de branding. He creado el proyecto "${name}" basándome en tu descripción. Para empezar a diseñar tu identidad ideal, cuéntame un poco más sobre el propósito principal de tu negocio. ¿Qué es lo que quieres lograr con esta marca?`,
             timestamp: new Date(),
           },
         ],
       };
-      
-      saveProject(newProject);
+
+      await saveProject(newProject);
       setProjects(prev => [newProject, ...prev]);
       setCurrentProject(newProject);
     } finally {
@@ -98,14 +111,38 @@ export function BrandProvider({ children }: { children: ReactNode }) {
     };
 
     setCurrentProject(updatedProject);
-    saveProject(updatedProject);
+    await saveProject(updatedProject);
     setProjects(prev => prev.map(p => p.id === updatedProject.id ? updatedProject : p));
 
     setIsLoading(true);
     try {
       // Generate context summary from conversation for smart responses
       const chatMessages = updatedProject.messages.map(m => ({ role: m.role, content: m.content }));
+
+      // Limit to 10 interactions
+      const userMessagesCount = updatedProject.messages.filter(m => m.role === 'user').length;
+      if (userMessagesCount >= 10) {
+        const limitMessage: Message = {
+          id: generateId(),
+          role: 'assistant',
+          content: "¡Hemos conversado bastante! Creo que ya tengo lo suficiente. Por favor, haz clic en el botón **'✨ Generar Branding'** aquí abajo para ver tus propuestas.",
+          timestamp: new Date(),
+        };
+        const finalProject = {
+          ...updatedProject,
+          messages: [...updatedProject.messages, limitMessage],
+          canGenerate: true,
+        };
+        setCurrentProject(finalProject);
+        await saveProject(finalProject);
+        setProjects(prev => prev.map(p => p.id === finalProject.id ? finalProject : p));
+        return;
+      }
+
       const response = await getAIResponse(chatMessages);
+
+      // Check for success phrase
+      const isComplete = response.includes("Generar Branding");
 
       const assistantMessage: Message = {
         id: generateId(),
@@ -117,17 +154,12 @@ export function BrandProvider({ children }: { children: ReactNode }) {
       const finalProject = {
         ...updatedProject,
         messages: [...updatedProject.messages, assistantMessage],
+        canGenerate: isComplete,
       };
 
       setCurrentProject(finalProject);
-      saveProject(finalProject);
+      await saveProject(finalProject);
       setProjects(prev => prev.map(p => p.id === finalProject.id ? finalProject : p));
-      
-      // Check if we have enough info to suggest generation
-      const userMessagesCount = finalProject.messages.filter(m => m.role === 'user').length;
-      if (userMessagesCount >= 3) {
-        conversationPhase.current = 'complete';
-      }
     } finally {
       setIsLoading(false);
     }
@@ -141,7 +173,7 @@ export function BrandProvider({ children }: { children: ReactNode }) {
       // Generate context summary from chat for better branding
       const chatMessages = currentProject.messages.map(m => ({ role: m.role, content: m.content }));
       const chatContext = generateContextSummary(chatMessages);
-      
+
       console.log('🎯 Generating branding with context:', {
         brandName: currentProject.name,
         description: currentProject.description,
@@ -173,9 +205,9 @@ export function BrandProvider({ children }: { children: ReactNode }) {
       };
 
       setCurrentProject(updatedProject);
-      saveProject(updatedProject);
+      await saveProject(updatedProject);
       setProjects(prev => prev.map(p => p.id === updatedProject.id ? updatedProject : p));
-      
+
       console.log('✅ Branding generation complete:', {
         proposalsCount: branding.proposals.length,
         hasLogo: !!branding.logo,
@@ -198,14 +230,14 @@ export function BrandProvider({ children }: { children: ReactNode }) {
         ],
       };
       setCurrentProject(errorProject);
-      saveProject(errorProject);
+      await saveProject(errorProject);
     } finally {
       setIsGenerating(false);
     }
   }, [currentProject]);
 
-  const deleteProject = useCallback((id: string) => {
-    deleteProjectService(id);
+  const deleteProject = useCallback(async (id: string) => {
+    await deleteProjectService(id);
     setProjects(prev => prev.filter(p => p.id !== id));
     if (currentProject?.id === id) {
       setCurrentProject(null);
@@ -218,9 +250,9 @@ export function BrandProvider({ children }: { children: ReactNode }) {
     setCurrentProject(null);
   }, []);
 
-  const updateProject = useCallback((project: BrandProject) => {
+  const updateProject = useCallback(async (project: BrandProject) => {
     setCurrentProject(project);
-    saveProject(project);
+    await saveProject(project);
     setProjects(prev => prev.map(p => p.id === project.id ? project : p));
   }, []);
 

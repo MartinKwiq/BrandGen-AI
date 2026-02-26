@@ -14,6 +14,7 @@ export interface BrandProject {
   status: 'draft' | 'generating' | 'completed' | 'exported';
   messages: Message[];
   branding?: BrandBranding;
+  canGenerate?: boolean;
 }
 
 export interface BrandBranding {
@@ -24,6 +25,12 @@ export interface BrandBranding {
   typography: TypographySet;
   icons: BrandIcon[];
   proposals: BrandProposal[];
+  selectedProposalId?: number;
+  selectedComponents?: {
+    colorProposalId?: number;
+    typographyProposalId?: number;
+    moodProposalId?: number;
+  };
 }
 
 export interface BrandColor {
@@ -55,9 +62,14 @@ export interface BrandProposal {
   name: string;
   description: string;
   colorScheme: string[];
-  typography: string;
+  typography: {
+    titulo: string;
+    cuerpo: string;
+  };
   mood: string;
   applications: string[];
+  logo?: string;
+  icons?: BrandIcon[];
 }
 
 export interface WebhookConfig {

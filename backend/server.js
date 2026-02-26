@@ -2,6 +2,11 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { GoogleGenAI } from "@google/genai";
+import * as storage from "./storageManager.js";
+import path from "path";
+import fs from "fs-extra";
+import PDFDocument from "pdfkit";
+import archiver from "archiver";
 
 
 dotenv.config();
@@ -19,16 +24,38 @@ const app = express();
 const PORT = 5000;
 
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
-const ai = new GoogleGenAI({
+const aiPrimary = new GoogleGenAI({
     apiKey: GEMINI_API_KEY,
 });
 
-const aiImageKey = process.env.GOOGLE_IMAGEN_API_KEY || GEMINI_API_KEY;
-const aiImage = new GoogleGenAI({
-    apiKey: aiImageKey,
-});
+const GEMINI_API_KEY_SECONDARY = process.env.GEMINI_API_KEY_SECONDARY;
+const aiSecondary = GEMINI_API_KEY_SECONDARY ? new GoogleGenAI({
+    apiKey: GEMINI_API_KEY_SECONDARY,
+}) : null;
+
+/**
+ * Helper to call Gemini with automatic fallback to secondary key
+ */
+async function safeGenerateContent(options) {
+    try {
+        // Intento con la llave primaria
+        return await aiPrimary.models.generateContent(options);
+    } catch (error) {
+        const isQuotaError = error.status === 429 || (error.message && error.message.includes("429"));
+        const isInternalError = error.status === 500;
+
+        if ((isQuotaError || isInternalError) && aiSecondary) {
+            console.warn(`⚠️ Llave primaria agotada o falló (${error.status}). Reintentando con llave secundaria...`);
+            return await aiSecondary.models.generateContent(options);
+        }
+        throw error;
+    }
+}
+
+// No separaremos aiImage para mantener simplicidad si usan la misma clave
 
 
 // Helper para delays
@@ -49,8 +76,8 @@ app.post("/api/generate", async (req, res) => {
         // TEXTO (Gemini)
         // ===============================
         if (type === "text") {
-            const response = await ai.models.generateContent({
-                model: "gemini-2.0-flash",
+            const response = await safeGenerateContent({
+                model: "gemini-2.5-flash",
                 contents: [{ role: "user", parts: [{ text: prompt }] }],
             });
 
@@ -74,7 +101,8 @@ app.post("/api/generate", async (req, res) => {
                 await delay(1000);
 
                 const model = "imagen-4.0-fast-generate-001";
-                const apiKey = process.env.GOOGLE_IMAGEN_API_KEY || process.env.GEMINI_API_KEY;
+                // Prioridad absoluta a la llave de imagen, si no existe usar la primaria de texto
+                const apiKey = process.env.GOOGLE_IMAGEN_API_KEY || GEMINI_API_KEY;
                 const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:predict?key=${apiKey}`;
 
                 console.log(`Generando imagen con ${model} (REST)...`);
@@ -135,30 +163,326 @@ app.post("/api/generate", async (req, res) => {
         // CHAT (Gemini)
         // ===============================
         if (type === "chat") {
-            const chatResponse = await ai.models.generateContent({
-                model: "gemini-2.0-flash",
+            const contents = history && history.length > 0 ? history : [{ role: "user", parts: [{ text: prompt }] }];
+            const chatResponse = await safeGenerateContent({
+                model: "gemini-2.5-flash",
                 systemInstruction:
                     systemInstruction ||
                     "Eres un asistente experto en branding. Responde claro y directo.",
-                contents: history || [],
+                contents: contents,
             });
 
             return res.json({ result: chatResponse.text });
         }
 
-        const defaultResponse = await ai.models.generateContent({
-            model: "gemini-2.0-flash",
+        const defaultResponse = await safeGenerateContent({
+            model: "gemini-2.5-flash",
             contents: [{ role: "user", parts: [{ text: prompt }] }],
         });
 
         res.json({ result: defaultResponse.text });
 
     } catch (error) {
-        console.error("ERROR EN BACKEND:", error);
+        console.error("ERROR EN BACKEND:", error.name, error.status);
+        if (error.message) {
+            try {
+                console.error("Detalle Error:", JSON.parse(error.message));
+            } catch (e) {
+                console.error("Mensaje Error:", error.message);
+            }
+        }
         res.status(500).json({
             error: "Error procesando solicitud de IA",
             details: error.message,
         });
+    }
+});
+
+// ===============================
+// GESTIÓN DE PROYECTOS (ALMACENAMIENTO)
+// ===============================
+
+// Listar todos los proyectos
+app.get("/api/projects", async (req, res) => {
+    try {
+        const projects = await storage.getProjects();
+        res.json(projects);
+    } catch (error) {
+        res.status(500).json({ error: "Error al listar proyectos" });
+    }
+});
+
+// Guardar/Actualizar un proyecto
+app.post("/api/projects", async (req, res) => {
+    try {
+        const project = req.body;
+        if (!project.id) project.id = Date.now().toString(36);
+        const savedProject = await storage.saveProject(project);
+        res.json(savedProject);
+    } catch (error) {
+        console.error("Error al guardar proyecto:", error);
+        res.status(500).json({ error: "Error al guardar el proyecto" });
+    }
+});
+
+// Obtener un proyecto específico
+app.get("/api/projects/:id", async (req, res) => {
+    try {
+        const project = await storage.getProjectById(req.params.id);
+        if (!project) return res.status(404).json({ error: "Proyecto no encontrado" });
+        res.json(project);
+    } catch (error) {
+        res.status(500).json({ error: "Error al obtener el proyecto" });
+    }
+});
+
+// Eliminar un proyecto
+app.delete("/api/projects/:id", async (req, res) => {
+    try {
+        const success = await storage.deleteProject(req.params.id);
+        if (!success) return res.status(404).json({ error: "Proyecto no encontrado" });
+        res.json({ success: true });
+    } catch (error) {
+        res.status(500).json({ error: "Error al eliminar el proyecto" });
+    }
+});
+
+// Servir imágenes guardadas
+app.get("/api/projects/:id/images/:imageName", (req, res) => {
+    const { id, imageName } = req.params;
+    const physicalPath = storage.getImagePhysicalPath(id, imageName);
+    if (fs.existsSync(physicalPath)) {
+        res.sendFile(physicalPath);
+    } else {
+        res.status(404).json({ error: "Imagen no encontrada" });
+    }
+});
+
+// ===============================
+// EXPORTACIÓN
+// ===============================
+
+// Exportar Branding a PDF Profesional
+app.get("/api/projects/:id/export/pdf", async (req, res) => {
+    try {
+        const project = await storage.getProjectById(req.params.id);
+        if (!project || !project.branding) {
+            return res.status(404).json({ error: "Branding no encontrado en el proyecto" });
+        }
+
+        const { branding } = project;
+
+        // --- LÓGICA DE FUSIÓN (IGUAL QUE EL FRONTEND) ---
+        let currentColors = branding.colors;
+        let currentTypography = branding.typography;
+        let currentLogo = branding.logo;
+
+        if (branding.selectedComponents) {
+            const { colorProposalId, typographyProposalId, logoProposalId } = branding.selectedComponents;
+
+            if (colorProposalId) {
+                const p = branding.proposals.find(prop => prop.id === colorProposalId);
+                if (p) {
+                    currentColors = p.colorScheme.map((hex, i) => ({
+                        name: i === 0 ? "Primario" : i === 1 ? "Secundario" : i === 2 ? "Acento" : `Color ${i + 1}`,
+                        hex,
+                        usage: i === 0 ? "Color principal" : "Color de apoyo"
+                    }));
+                }
+            }
+
+            if (typographyProposalId) {
+                const p = branding.proposals.find(prop => prop.id === typographyProposalId);
+                if (p) {
+                    currentTypography = {
+                        heading: { name: p.typography.titulo, usage: "Títulos" },
+                        body: { name: p.typography.cuerpo, usage: "Cuerpo" }
+                    };
+                }
+            }
+
+            if (logoProposalId) {
+                const p = branding.proposals.find(prop => prop.id === logoProposalId);
+                if (p && p.logo) currentLogo = p.logo;
+            }
+        }
+
+        const doc = new PDFDocument({
+            margin: 50,
+            size: 'A4',
+            info: { Title: `Brand Guide - ${branding.brandName}`, Author: 'BrandGen AI' }
+        });
+
+        const filename = `Branding_${branding.brandName.replace(/\s+/g, '_')}.pdf`;
+
+        res.setHeader("Content-Type", "application/pdf");
+        res.setHeader("Content-Disposition", `attachment; filename=${filename}`);
+
+        doc.pipe(res);
+
+        // --- PORTADA ---
+        const primaryColor = currentColors[0]?.hex || "#6366f1";
+        doc.rect(0, 0, doc.page.width, 300).fill(primaryColor);
+        doc.fillColor("white").fontSize(40).text(branding.brandName, 50, 120);
+        doc.fontSize(18).text(branding.tagline || "", 50, 175);
+        doc.fontSize(10).text(`Guía de Identidad Visual • ${new Date().toLocaleDateString()}`, 50, 260);
+
+        // --- SECCIÓN 1: LOGOTIPO ---
+        doc.fillColor("black").fontSize(20).text("1. Logotipo Principal", 50, 340);
+        doc.moveTo(50, 365).lineTo(550, 365).stroke("#eeeeee");
+
+        if (currentLogo) {
+            try {
+                if (currentLogo.startsWith("data:image")) {
+                    doc.image(currentLogo, 50, 390, { fit: [200, 200] });
+                } else {
+                    const logoFileName = currentLogo.split("/").pop();
+                    const logoPath = storage.getImagePhysicalPath(project.id, logoFileName);
+                    if (fs.existsSync(logoPath)) {
+                        doc.image(logoPath, 50, 390, { fit: [200, 200] });
+                    }
+                }
+            } catch (e) {
+                console.error("Error embedding logo in PDF:", e);
+                doc.fontSize(10).fillColor("#999999").text("[Imagen del logotipo no disponible]", 50, 390);
+            }
+        }
+
+        // --- SECCIÓN 2: PALETA DE COLORES ---
+        doc.addPage();
+        doc.fillColor("black").fontSize(20).text("2. Paleta de Colores", 50, 50);
+        doc.moveTo(50, 75).lineTo(550, 75).stroke("#eeeeee");
+
+        if (currentColors && Array.isArray(currentColors)) {
+            currentColors.forEach((color, i) => {
+                const yPos = 100 + (i * 70);
+                doc.rect(50, yPos, 50, 50).fill(color.hex);
+                doc.fillColor("black").fontSize(12).text(color.name, 115, yPos + 10);
+                doc.fillColor("#666666").fontSize(10).text(`HEX: ${color.hex.toUpperCase()}`, 115, yPos + 25);
+                doc.fontSize(9).text(color.usage, 115, yPos + 38);
+            });
+        }
+
+        // --- SECCIÓN 3: TIPOGRAFÍA ---
+        doc.moveDown(4);
+        const typoY = doc.y + 20;
+        doc.fillColor("black").fontSize(20).text("3. Tipografía", 50, typoY);
+        doc.moveTo(50, typoY + 25).lineTo(550, typoY + 25).stroke("#eeeeee");
+
+        if (currentTypography) {
+            const hName = currentTypography.heading?.name || "Inter";
+            const bName = currentTypography.body?.name || "DM Sans";
+
+            doc.fillColor("black").fontSize(14).text(`Títulos: ${hName}`, 50, typoY + 50);
+            doc.fillColor("#666666").fontSize(10).text(`Uso: ${currentTypography.heading?.usage || "Titulares"}`, 50, typoY + 70);
+            doc.fontSize(22).fillColor("black").text("ABCDEFGHIJKLMNÑOPQRSTUVWXYZ", 50, typoY + 90);
+
+            doc.fontSize(14).text(`Cuerpo: ${bName}`, 50, typoY + 140);
+            doc.fillColor("#666666").fontSize(10).text(`Uso: ${currentTypography.body?.usage || "Párrafos"}`, 50, typoY + 160);
+            doc.fontSize(12).fillColor("#333333").text("El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña tocaba el saxofón detrás del palenque de paja.", 50, typoY + 180, { width: 500 });
+        }
+
+        // --- SECCIÓN 4: ICONOGRAFÍA ---
+        doc.addPage();
+        doc.fillColor("black").fontSize(20).text("4. Iconografía y Elementos", 50, 50);
+        doc.moveTo(50, 75).lineTo(550, 75).stroke("#eeeeee");
+
+        if (branding.icons && Array.isArray(branding.icons)) {
+            const iconSize = 80;
+            const margin = 20;
+            const iconsPerRow = 4;
+
+            branding.icons.forEach((icon, i) => {
+                const row = Math.floor(i / iconsPerRow);
+                const col = i % iconsPerRow;
+                const x = 50 + col * (iconSize + margin);
+                const y = 100 + row * (iconSize + 40);
+
+                try {
+                    if (icon.svg.startsWith("data:image")) {
+                        doc.image(icon.svg, x, y, { fit: [iconSize, iconSize] });
+                    } else if (icon.svg.startsWith("<svg")) {
+                        // Omitir SVGs crudos en el PDF por ahora si no hay conversor, o renderizar como texto/placeholder
+                        doc.rect(x, y, iconSize, iconSize).stroke("#cccccc");
+                    } else {
+                        const iconFileName = icon.svg.split("/").pop();
+                        const iconPath = storage.getImagePhysicalPath(project.id, iconFileName);
+                        if (fs.existsSync(iconPath)) {
+                            doc.image(iconPath, x, y, { fit: [iconSize, iconSize] });
+                        }
+                    }
+                    doc.fillColor("#666666").fontSize(8).text(icon.name, x, y + iconSize + 5, { width: iconSize, align: 'center' });
+                } catch (e) {
+                    console.error("Error embedding icon in PDF:", e);
+                }
+            });
+        }
+
+        doc.end();
+
+    } catch (error) {
+        console.error("Error generating PDF:", error);
+        if (!res.headersSent) {
+            res.status(500).json({ error: "error al generar el PDF", detail: error.message });
+        }
+    }
+});
+
+// Exportar Contenidos (Logo + Iconos) a ZIP
+app.get("/api/projects/:id/export/contents", async (req, res) => {
+    try {
+        const project = await storage.getProjectById(req.params.id);
+        if (!project || !project.branding) {
+            return res.status(404).json({ error: "Branding no encontrado" });
+        }
+
+        const { branding } = project;
+
+        // --- LÓGICA DE FUSIÓN PARA EL LOGO ---
+        let currentLogo = branding.logo;
+        if (branding.selectedComponents?.logoProposalId) {
+            const p = branding.proposals.find(prop => prop.id === branding.selectedComponents.logoProposalId);
+            if (p && p.logo) currentLogo = p.logo;
+        }
+
+        const archive = archiver("zip", { zlib: { level: 9 } });
+        res.setHeader("Content-Type", "application/zip");
+        res.setHeader("Content-Disposition", `attachment; filename=Contenidos_Marca_${branding.brandName.replace(/\s+/g, '_')}.zip`);
+
+        archive.pipe(res);
+
+        const addToZip = (source, name) => {
+            if (!source) return;
+            if (source.startsWith("data:image")) {
+                const buffer = Buffer.from(source.split(",")[1], "base64");
+                archive.append(buffer, { name });
+            } else if (!source.startsWith("<svg")) {
+                const fileName = source.split("/").pop();
+                const filePath = storage.getImagePhysicalPath(project.id, fileName);
+                if (fs.existsSync(filePath)) {
+                    archive.file(filePath, { name });
+                }
+            }
+        };
+
+        // Añadir Logotipo
+        if (currentLogo) {
+            addToZip(currentLogo, "Logotipo_Principal.png");
+        }
+
+        // Añadir Iconos
+        if (branding.icons && Array.isArray(branding.icons)) {
+            branding.icons.forEach((icon) => {
+                addToZip(icon.svg, `Iconos/${icon.name.replace(/\s+/g, '_')}.png`);
+            });
+        }
+
+        await archive.finalize();
+    } catch (error) {
+        console.error("Error generating ZIP:", error);
+        if (!res.headersSent) {
+            res.status(500).json({ error: "Error al generar el ZIP", detail: error.message });
+        }
     }
 });
 

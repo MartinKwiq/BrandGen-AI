@@ -13,31 +13,31 @@ export function TypographyDisplay({ typography }: TypographyDisplayProps) {
         <div className="flex items-center gap-2 mb-4">
           <span className="px-2 py-1 bg-violet-100 text-violet-700 text-xs font-medium rounded-lg">Títulos</span>
         </div>
-        
+
         <div className="space-y-4">
           <div>
             <p className="text-xs text-slate-500 uppercase tracking-wide mb-2">Preview</p>
-            <p 
-              className="text-4xl font-bold text-slate-900 leading-tight"
+            <p
+              className="text-2xl font-bold text-slate-900 leading-tight overflow-hidden break-words"
               style={{ fontFamily: typography.heading.fontFamily }}
             >
-              ABCDEFGHIJKLMNÑOPQRSTUVWXYZ
+              ABCDEFGHIJKLM<br />NÑOPQRSTUVWXYZ
             </p>
-            <p 
-              className="text-4xl font-bold text-slate-900 leading-tight mt-2"
+            <p
+              className="text-2xl font-bold text-slate-900 leading-tight mt-2"
               style={{ fontFamily: typography.heading.fontFamily }}
             >
               0123456789
             </p>
           </div>
-          
+
           <hr className="border-slate-100" />
-          
+
           <div>
             <p className="text-sm text-slate-600">{typography.heading.name}</p>
             <p className="text-xs text-slate-400 mt-1">{typography.heading.usage}</p>
           </div>
-          
+
           <code className="block bg-slate-100 p-2 rounded-lg text-xs text-slate-600 font-mono overflow-x-auto">
             font-family: '{typography.heading.name}', sans-serif;
           </code>
@@ -49,17 +49,17 @@ export function TypographyDisplay({ typography }: TypographyDisplayProps) {
         <div className="flex items-center gap-2 mb-4">
           <span className="px-2 py-1 bg-indigo-100 text-indigo-700 text-xs font-medium rounded-lg">Cuerpo</span>
         </div>
-        
+
         <div className="space-y-4">
           <div>
             <p className="text-xs text-slate-500 uppercase tracking-wide mb-2">Preview</p>
-            <p 
+            <p
               className="text-base text-slate-700 leading-relaxed"
               style={{ fontFamily: typography.body.fontFamily }}
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
             </p>
-            <p 
+            <p
               className="text-sm text-slate-500 mt-3"
               style={{ fontFamily: typography.body.fontFamily }}
             >
@@ -68,14 +68,14 @@ export function TypographyDisplay({ typography }: TypographyDisplayProps) {
               0123456789
             </p>
           </div>
-          
+
           <hr className="border-slate-100" />
-          
+
           <div>
             <p className="text-sm text-slate-600">{typography.body.name}</p>
             <p className="text-xs text-slate-400 mt-1">{typography.body.usage}</p>
           </div>
-          
+
           <code className="block bg-slate-100 p-2 rounded-lg text-xs text-slate-600 font-mono overflow-x-auto">
             font-family: '{typography.body.name}', sans-serif;
           </code>
@@ -103,7 +103,7 @@ export function TypographyComparison({ typography, title }: TypographyComparison
             <span className="px-2 py-1 bg-violet-100 text-violet-700 text-xs font-medium rounded-lg">Títulos</span>
             <span className="text-sm text-slate-600">{typography.heading.name}</span>
           </div>
-          <p 
+          <p
             className="text-3xl font-bold text-slate-900"
             style={{ fontFamily: typography.heading.fontFamily }}
           >
@@ -115,7 +115,7 @@ export function TypographyComparison({ typography, title }: TypographyComparison
             <span className="px-2 py-1 bg-indigo-100 text-indigo-700 text-xs font-medium rounded-lg">Texto</span>
             <span className="text-sm text-slate-600">{typography.body.name}</span>
           </div>
-          <p 
+          <p
             className="text-base text-slate-600 leading-relaxed"
             style={{ fontFamily: typography.body.fontFamily }}
           >

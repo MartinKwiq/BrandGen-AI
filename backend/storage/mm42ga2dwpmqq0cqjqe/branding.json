@@ -1,0 +1,401 @@
+{
+  "id": "mm42ga2dwpmqq0cqjqe",
+  "name": "Clinica Dental Moderna",
+  "description": "Una clinica dental moderna que utiliza tecnologia de vanguardia para ofrecer tratamientos dentales de alta calidad en un ambiente comodo y relajante.",
+  "createdAt": "2026-02-26T23:00:04.981Z",
+  "updatedAt": "2026-02-26T23:03:16.375Z",
+  "status": "completed",
+  "messages": [
+    {
+      "id": "mm42ga2di3lgffgmhmg",
+      "role": "assistant",
+      "content": "¡Hola! Soy BrandGen AI, tu consultor de branding. He creado el proyecto \"Clinica Dental Moderna\" basándome en tu descripción. Para empezar a diseñar tu identidad ideal, cuéntame un poco más sobre el propósito principal de tu negocio. ¿Qué es lo que quieres lograr con esta marca?",
+      "timestamp": "2026-02-26T23:00:04.981Z"
+    },
+    {
+      "id": "mm42gpy5kyy0xdkumcp",
+      "role": "user",
+      "content": "Quiero transmitir confianza, limpieza y tecnologia dental avanzada.",
+      "timestamp": "2026-02-26T23:00:25.565Z"
+    },
+    {
+      "id": "mm42gxd10wvs85uch0al",
+      "role": "assistant",
+      "content": "¡Perfecto! Confianza, limpieza y tecnología avanzada... estos tres pilares son excelentes para construir una marca sólida y atractiva en el sector dental.\n\nPara empezar a visualizar tu \"Clinica Dental Moderna\", vamos a traducir esos conceptos en elementos de diseño.\n\n1.  **Para el logo, ¿te inclinas más por un diseño abstracto y moderno, un ícono que represente un diente o una sonrisa de forma estilizada, o algo más tipográfico y elegante?**\n    *   **Abstracto/Moderno:** Transmite innovación y vanguardia.\n    *   **Icónico Estilizado:** Es reconocible al instante y puede ser amigable, pero moderno.\n    *   **Tipográfico Elegante:** Refuerza la profesionalidad y la seriedad.\n\n2.  **En cuanto a la paleta de colores, ¿qué sensación quieres transmitir principalmente?**\n    *   **Fresco y Luminoso:** (Tonos de azul claro, verde menta, blanco) para enfatizar limpieza y salud.\n    *   **Sofisticado y Tecnológico:** (Azules más profundos, grises plateados, toques de blanco) para la tecnología y la confianza.\n    *   **Cálido y Tranquilizador con toques modernos:** (Azules suaves, quizás un beige o gris cálido, acentos de color) para generar calma y confianza sin perder modernidad.\n\n3.  **Visualmente, ¿qué estilo general te gustaría que tuviera tu marca?**\n    *   **Minimalista y Preciso:** Líneas limpias, mucho espacio en blanco, tipografías delgadas y modernas.\n    *   **Profesional y Robusto:** Formas más sólidas, tipografías estructuradas, pero aún modernas.\n    *   **Amigable y Cercano, pero Aún Moderno:** Curvas suaves, quizás algún elemento gráfico más orgánico pero estilizado.\n\n¡Espero tus ideas para empezar a dar forma a \"Clinica Dental Moderna\"!",
+      "timestamp": "2026-02-26T23:00:35.173Z"
+    },
+    {
+      "id": "mm42hin6nw51mvhact",
+      "role": "user",
+      "content": "Prefiero un icono estilizado. Por favor, hazme las preguntas de una en una para que podamos profundizar en cada aspecto.",
+      "timestamp": "2026-02-26T23:01:02.754Z"
+    },
+    {
+      "id": "mm42hj7jemwpk0qk3n",
+      "role": "assistant",
+      "content": "¿Hay algo más que deba saber sobre tu marca? Por ejemplo, ¿quién es tu público objetivo o qué valores quieres transmitir?",
+      "timestamp": "2026-02-26T23:01:03.487Z"
+    },
+    {
+      "id": "mm42i64af2x9uimt3bp",
+      "role": "user",
+      "content": "El publico objetivo son adultos jovenes y familias. Los valores son precision y modernidad. Ahora, para la paleta de colores, prefiero Sofisticado y Tecnologico.",
+      "timestamp": "2026-02-26T23:01:33.178Z"
+    },
+    {
+      "id": "mm42i93izzvkmp73de",
+      "role": "assistant",
+      "content": "¡Excelente elección! \"Sofisticado y Tecnológico\" es perfecto para tus valores de precisión y modernidad, y resonará bien con adultos jóvenes y familias que buscan lo mejor en cuidado dental.\n\nDentro de una paleta \"Sofisticada y Tecnológica\" (azules más profundos, grises plateados, toques de blanco), podríamos explorar varias combinaciones que transmitan distintas nuances.\n\n**¿Qué combinación específica de estos colores te atrae más para la identidad de \"Clinica Dental Moderna\"?**\n\n1.  **\"Cielo Nocturno y Acero\":** Un azul medianoche o azul cobalto como color principal, combinado con un gris plata brillante y blanco puro. Transmite mucha profundidad, seriedad tecnológica y una limpieza impecable.\n2.  **\"Océano Digital\":** Un azul turquesa profundo o azul verdoso como base, mezclado con grises más suaves (como el gris claro o perla) y toques de blanco. Ofrece un aire moderno, fresco y ligeramente más accesible, pero aún muy tecnológico.\n3.  **\"Grafito y Hielo\":** Un gris oscuro casi negro (grafito) o un gris antracita como color dominante, acentuado con un azul eléctrico o cian brillante y blanco. Esto daría una sensación muy vanguardista, minimalista y de alta tecnología.",
+      "timestamp": "2026-02-26T23:01:37.038Z"
+    },
+    {
+      "id": "mm42is2d5oudb6509h",
+      "role": "user",
+      "content": "Me gusta mucho 'Cielo Nocturno y Acero'. En cuanto al estilo visual general, prefiero Minimalista y Preciso.",
+      "timestamp": "2026-02-26T23:02:01.621Z"
+    },
+    {
+      "id": "mm42isncmjtmvxm723",
+      "role": "assistant",
+      "content": "¡Excelente! Con toda esta información podré crear un branding perfecto para ti. ¿Generamos las propuestas?",
+      "timestamp": "2026-02-26T23:02:02.376Z"
+    },
+    {
+      "id": "mm42jckydtiqyrxzzom",
+      "role": "user",
+      "content": "Si, por favor! Genera las propuestas.",
+      "timestamp": "2026-02-26T23:02:28.210Z"
+    },
+    {
+      "id": "mm42jd4y12nojzlwrjmr",
+      "role": "assistant",
+      "content": "Tengo toda la información que necesito. ¿Listo para generar tu branding? Haz clic en '✨ Generar Branding'",
+      "timestamp": "2026-02-26T23:02:28.930Z"
+    },
+    {
+      "id": "mm42kdqvk3omaiu2e",
+      "role": "assistant",
+      "content": "¡He generado tu branding completo con 5 propuestas únicas! Cada propuesta incluye un logo profesional, paleta de 6 colores, 2 tipografías y 6 iconos concordantes. Explora las diferentes propuestas y elige la que mejor represente tu marca.",
+      "timestamp": "2026-02-26T23:03:16.375Z"
+    }
+  ],
+  "canGenerate": true,
+  "branding": {
+    "brandName": "Clinica Dental Moderna",
+    "tagline": "Innovación que transforma",
+    "logo": "/api/projects/mm42ga2dwpmqq0cqjqe/images/logo_main_1772147212279_nuclm.png",
+    "colors": [
+      {
+        "name": "Azul Noche Profundo",
+        "hex": "#0F1B3E",
+        "usage": "Primario"
+      },
+      {
+        "name": "Gris Acero Suave",
+        "hex": "#B0BEC5",
+        "usage": "Secundario"
+      },
+      {
+        "name": "Blanco Puro",
+        "hex": "#FFFFFF",
+        "usage": "Fondo 1"
+      },
+      {
+        "name": "Cian Claro",
+        "hex": "#ADD8E6",
+        "usage": "Acento"
+      },
+      {
+        "name": "Gris Niebla",
+        "hex": "#F5F7F8",
+        "usage": "Fondo 2"
+      },
+      {
+        "name": "Plata Pulida",
+        "hex": "#E0E0E0",
+        "usage": "Complemento"
+      }
+    ],
+    "typography": {
+      "heading": {
+        "name": "Outfit",
+        "fontFamily": "Outfit, sans-serif",
+        "usage": "Títulos",
+        "googleFont": "Outfit"
+      },
+      "body": {
+        "name": "Inter",
+        "fontFamily": "Inter, sans-serif",
+        "usage": "Cuerpo",
+        "googleFont": "Inter"
+      }
+    },
+    "icons": [],
+    "proposals": [
+      {
+        "id": 1,
+        "name": "Armonía Tecnológica",
+        "description": "Esta dirección evoca una sensación de calma, limpieza impecable y la precisión de la tecnología moderna a través de un diseño sin adornos. Busca transmitir confianza y sofisticación con una estética pulcra y serena.",
+        "colorScheme": [
+          "#0F1B3E",
+          "#B0BEC5",
+          "#FFFFFF",
+          "#ADD8E6",
+          "#F5F7F8",
+          "#E0E0E0"
+        ],
+        "typography": {
+          "titulo": "Outfit",
+          "cuerpo": "Inter"
+        },
+        "mood": "Minimalista/Puro",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm42ga2dwpmqq0cqjqe/images/logo_prop_0_1772147212281_rkg85.png",
+        "icons": []
+      },
+      {
+        "id": 2,
+        "name": "Pulso Digital",
+        "description": "Esta propuesta se enfoca en la vanguardia tecnológica y la eficiencia, comunicando una experiencia dental avanzada y dinámica. Utiliza un lenguaje visual que proyecta innovación y un futuro brillante en el cuidado oral.",
+        "colorScheme": [
+          "#007BFF",
+          "#343A40",
+          "#FFFFFF",
+          "#00C2FF",
+          "#ADB5BD",
+          "#00CED1"
+        ],
+        "typography": {
+          "titulo": "Sora",
+          "cuerpo": "Montserrat"
+        },
+        "mood": "Moderno/Tech",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm42ga2dwpmqq0cqjqe/images/logo_prop_1_1772147212282_twbnm.png",
+        "icons": [
+          {
+            "name": "home",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg>",
+            "description": "Icono de home"
+          },
+          {
+            "name": "search",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg>",
+            "description": "Icono de search"
+          },
+          {
+            "name": "user",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg>",
+            "description": "Icono de user"
+          },
+          {
+            "name": "settings",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24\"/></svg>",
+            "description": "Icono de settings"
+          },
+          {
+            "name": "heart",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>",
+            "description": "Icono de heart"
+          },
+          {
+            "name": "star",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+            "description": "Icono de star"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Visión Vanguardista",
+        "description": "Propuesta que trasciende lo convencional, presentando la clínica como un referente del futuro dental con soluciones pioneras. Inspira curiosidad y confianza en la tecnología de punta, con un enfoque audaz y visionario.",
+        "colorScheme": [
+          "#4B0082",
+          "#1A1A2E",
+          "#00FF00",
+          "#E0FFFF",
+          "#6A7D8E",
+          "#00FFFF"
+        ],
+        "typography": {
+          "titulo": "Fraunces",
+          "cuerpo": "Roboto Mono"
+        },
+        "mood": "Innovador/Futurista",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm42ga2dwpmqq0cqjqe/images/logo_prop_2_1772147212283_g2rgo.png",
+        "icons": [
+          {
+            "name": "home",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg>",
+            "description": "Icono de home"
+          },
+          {
+            "name": "search",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg>",
+            "description": "Icono de search"
+          },
+          {
+            "name": "user",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg>",
+            "description": "Icono de user"
+          },
+          {
+            "name": "settings",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24\"/></svg>",
+            "description": "Icono de settings"
+          },
+          {
+            "name": "heart",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>",
+            "description": "Icono de heart"
+          },
+          {
+            "name": "star",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+            "description": "Icono de star"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Elegancia Clínica",
+        "description": "Esta dirección resalta la profesionalidad, el lujo discreto y la confianza que solo una trayectoria distinguida puede ofrecer. Combina la sofisticación atemporal con un toque moderno para un público que valora la excelencia y el confort.",
+        "colorScheme": [
+          "#1F2F3F",
+          "#F5F5DC",
+          "#D4AF37",
+          "#F8F8F8",
+          "#8B8B8B",
+          "#A9CCE3"
+        ],
+        "typography": {
+          "titulo": "Playfair Display",
+          "cuerpo": "Merriweather"
+        },
+        "mood": "Clásico/Elegante",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm42ga2dwpmqq0cqjqe/images/logo_prop_3_1772147212283_vtrbf.png",
+        "icons": [
+          {
+            "name": "home",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg>",
+            "description": "Icono de home"
+          },
+          {
+            "name": "search",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg>",
+            "description": "Icono de search"
+          },
+          {
+            "name": "user",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg>",
+            "description": "Icono de user"
+          },
+          {
+            "name": "settings",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24\"/></svg>",
+            "description": "Icono de settings"
+          },
+          {
+            "name": "heart",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>",
+            "description": "Icono de heart"
+          },
+          {
+            "name": "star",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+            "description": "Icono de star"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Impacto Brillante",
+        "description": "Una propuesta para una clínica que no teme destacar, ofreciendo una imagen enérgica y moderna que rompe con lo convencional. Busca atraer a un público joven y dinámico a través de una estética vibrante y llena de personalidad.",
+        "colorScheme": [
+          "#2C3E50",
+          "#FF5733",
+          "#20B2AA",
+          "#FFFFFF",
+          "#7F8C8D",
+          "#BFFF00"
+        ],
+        "typography": {
+          "titulo": "Oswald",
+          "cuerpo": "Noto Sans"
+        },
+        "mood": "Audaz/Rebelde",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm42ga2dwpmqq0cqjqe/images/logo_prop_4_1772147212284_czu80.png",
+        "icons": [
+          {
+            "name": "home",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg>",
+            "description": "Icono de home"
+          },
+          {
+            "name": "search",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg>",
+            "description": "Icono de search"
+          },
+          {
+            "name": "user",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg>",
+            "description": "Icono de user"
+          },
+          {
+            "name": "settings",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24\"/></svg>",
+            "description": "Icono de settings"
+          },
+          {
+            "name": "heart",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>",
+            "description": "Icono de heart"
+          },
+          {
+            "name": "star",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+            "description": "Icono de star"
+          }
+        ]
+      }
+    ],
+    "selectedComponents": {
+      "typographyProposalId": 2,
+      "moodProposalId": 2,
+      "colorProposalId": 3
+    }
+  }
+}

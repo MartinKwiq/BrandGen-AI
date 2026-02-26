@@ -1,7 +1,8 @@
 import type { BrandProject, BrandBranding, BrandProposal, BrandColor, BrandIcon } from '../types';
 
 // API Configuration
-const BACKEND_URL = 'http://localhost:5000/api/generate';
+const BASE_URL = 'http://localhost:5000/api';
+const BACKEND_URL = `${BASE_URL}/generate`;
 
 // Helper to call backend API
 async function callBackend(data: any): Promise<any> {
@@ -70,26 +71,40 @@ export async function generateBranding(
     console.log('🎨 Starting Backend Branding Generation...', { brandName, industry });
 
     // ===== AGENTE 1: DIRECTOR CREATIVO =====
-    const directorPrompt = `Actúa como un Director Creativo Senior de una agencia de branding premium.
-
+    const directorPrompt = `Actúa como un Director Creativo Senior de una agencia de branding de clase mundial.
+ 
 ANÁLISIS DE MARCA:
 - Nombre: ${brandName}
 - Industria: ${industry || 'General'}
 - Descripción: ${description}
 - Público objetivo: ${targetAudience || 'General'}
-${chatContext ? `\nContexto de conversación: ${chatContext}` : ''}
-
-Tu tarea: Define 5 direcciones creativas ÚNICAS y DISTINTAS para esta marca.
-Cada dirección debe tener:
-1. Un nombre creativo para la propuesta
-2. Descripción del concepto (2-3 oraciones)
-3. Mood/Estilo: moderno, clásico, minimalista, audaz, elegante
-4. Paleta de colores: 6 colores hexadecimales específicos con usos definidos
-5. Tipografías: 2 fuentes de Google Fonts (una para títulos, una para cuerpo)
-6. Descripción visual detallada para el logo (cómo debería verse)
-7. Descripción del sistema de iconos (estilo visual)
-
-Responde en JSON puro sin markdown.`;
+${chatContext ? `\nContexto detallado de la entrevista: ${chatContext}` : ''}
+ 
+Tu tarea: Define 5 direcciones creativas RADICALMENTE DISTINTAS entre sí para esta marca.
+ 
+REQUERIMIENTOS POR PROPUESTA:
+1. **Nombre Creativo**: Título sugerente para la propuesta.
+2. **Mood/Estilo**: Debe ser uno de estos 5 (sin repetir): [Moderno/Tech, Clásico/Elegante, Minimalista/Puro, Audaz/Rebelde, Innovador/Futurista].
+3. **Concepto**: Explicación de 2 oraciones del porqué de este estilo para el negocio.
+4. **Paleta de Colores**: 6 colores HEX con nombres y usos (ej: Primario, Secundario, Acento, Fondo 1, Fondo 2, Complemento). Las paletas deben variar en temperatura y contraste.
+5. **Tipografías**: PAREJA ÚNICA de Google Fonts (título y cuerpo). Usa fuentes diversas como [Inter, Montserrat, Playfair Display, Roboto Mono, Sora, Outfit, Fraunces]. No repitas fuentes en las 5 propuestas.
+6. **Descripción Visual del Logo**: Detalles para un diseñador sobre formas, símbolos y composición.
+7. **Estilo de Iconografía**: Describe cómo deben ser los iconos (ej: "Líneas finas minimalistas", "3D Glassmorphism colorido", "Geométrico sólido").
+ 
+Responde ESTRICTAMENTE en este formato JSON (sin markdown, sin texto extra):
+{
+  "proposals": [
+    {
+      "name": "...",
+      "mood": "...",
+      "description": "...",
+      "colors": [ {"name": "...", "hex": "#...", "usage": "..."} ],
+      "typography": { "titulo": "Font Name", "cuerpo": "Font Name" },
+      "logoDescription": "...",
+      "iconStyle": "..."
+    }
+  ]
+}`;
 
     console.log('🎭 Agent 1: Director Creativo (Backend)...');
     const { result: creativeDirections } = await callBackend({
@@ -100,16 +115,11 @@ Responde en JSON puro sin markdown.`;
     // Clean JSON
     let cleanedJson = creativeDirections.trim();
 
-    // Eliminar bloques markdown
-    cleanedJson = cleanedJson.replace(/```json/g, '');
-    cleanedJson = cleanedJson.replace(/```/g, '');
-
-    // Eliminar trailing commas inválidas en arrays y objetos
-    cleanedJson = cleanedJson.replace(/,\s*]/g, ']');
-    cleanedJson = cleanedJson.replace(/,\s*}/g, '}');
+    // Eliminar bloques markdown si la IA los incluyó a pesar de la instrucción
+    cleanedJson = cleanedJson.replace(/```json/g, '').replace(/```/g, '');
 
     const creativeData = JSON.parse(cleanedJson);
-    console.log('✅ Creative data parsed');
+    console.log('✅ Creative data parsed with diversity');
 
     // ===== AGENTE 2: DISEÑADOR GRÁFICO (Genera Logos con Imagen 3 via Backend) =====
     console.log('🎨 Agent 2: Graphic Designer (Backend Imagen 3)...');
@@ -117,10 +127,11 @@ Responde en JSON puro sin markdown.`;
     const proposals = [];
     let directions: any[] = [];
 
-    if (Array.isArray(creativeData)) {
+    if (creativeData.proposals && Array.isArray(creativeData.proposals)) {
+      directions = creativeData.proposals;
+    } else if (Array.isArray(creativeData)) {
       directions = creativeData;
     } else if (typeof creativeData === "object" && creativeData !== null) {
-      // Intentar detectar dinámicamente cualquier array dentro del objeto
       const possibleArray = Object.values(creativeData).find(v => Array.isArray(v));
       if (possibleArray) directions = possibleArray as any[];
     }
@@ -128,47 +139,39 @@ Responde en JSON puro sin markdown.`;
     if (!directions.length) {
       throw new Error("No se generaron propuestas desde el backend");
     }
+
     for (let i = 0; i < Math.min(5, directions.length); i++) {
       const direction = directions[i];
 
-      // Normalización de datos para compatibilidad con nuevas claves de Gemini
-      const rawColors =
-        direction.colors ||
-        direction.paleta_colores ||
-        null;
-
+      const rawColors = direction.colors || direction.paleta_colores || null;
       let normalizedColors: BrandColor[] | undefined;
 
       if (Array.isArray(rawColors)) {
-        normalizedColors = rawColors;
-      } else if (rawColors && typeof rawColors === "object") {
-        normalizedColors = Object.entries(rawColors).map(([key, value]) => ({
-          name: key.charAt(0).toUpperCase() + key.slice(1),
-          hex: value as string,
-          usage: `Color ${key}`
+        normalizedColors = rawColors.map((c: any) => ({
+          name: c.name || c.nombre || "Color",
+          hex: c.hex || c.hexadecimal || (typeof c === 'string' ? c : "#6366f1"),
+          usage: c.usage || c.uso || "Uso general"
         }));
       }
 
-      const rawTypography =
-        direction.typography ||
-        direction.tipografias ||
-        null;
-
+      const rawTypography = direction.typography || direction.tipografias || null;
       let normalizedTypography = rawTypography;
 
       if (rawTypography && typeof rawTypography === "object") {
+        const titleFont = rawTypography.titulo || rawTypography.titulos || "Inter";
+        const bodyFont = rawTypography.cuerpo || "DM Sans";
         normalizedTypography = {
           heading: {
-            name: rawTypography.titulo || rawTypography.titulos || "Inter",
-            fontFamily: `${rawTypography.titulo || rawTypography.titulos || "Inter"}, sans-serif`,
+            name: titleFont,
+            fontFamily: `${titleFont}, sans-serif`,
             usage: "Títulos",
-            googleFont: rawTypography.titulo || rawTypography.titulos || "Inter"
+            googleFont: titleFont.replace(/\s+/g, '+')
           },
           body: {
-            name: rawTypography.cuerpo || "DM Sans",
-            fontFamily: `${rawTypography.cuerpo || "DM Sans"}, sans-serif`,
+            name: bodyFont,
+            fontFamily: `${bodyFont}, sans-serif`,
             usage: "Cuerpo",
-            googleFont: rawTypography.cuerpo || "DM Sans"
+            googleFont: bodyFont.replace(/\s+/g, '+')
           }
         };
       }
@@ -177,52 +180,71 @@ Responde en JSON puro sin markdown.`;
         ...direction,
         colors: normalizedColors,
         typography: normalizedTypography,
-        logoDescription:
-          direction.logoDescription ||
-          direction.descripcion_logo ||
-          direction.logo,
-        iconStyle:
-          direction.iconStyle ||
-          direction.sistema_iconos
+        visualDescription: direction.logoDescription || direction.descripcion_logo || direction.logo || 'Modern and professional design',
+        iconStyle: direction.iconStyle || direction.sistema_iconos || "Flat design"
       };
 
       let logoImageUrl = '';
 
-      // Generation: Solo la primera propuesta genera imágenes reales
       if (i === 0) {
-        const logoPrompt = `Professional logo design for "${brandName}". ${normalizedDirection.visualDescription || normalizedDirection.logoDescription || 'Modern and professional design'}. 
+        const logoPrompt = `Professional logo design for "${brandName}". ${normalizedDirection.visualDescription}. 
 Style: ${normalizedDirection.mood || 'modern'}. 
-Colors: ${normalizedDirection.colors?.map((c: any) => c.hex || c).join(', ') || '#6366f1, #8b5cf6'}. 
-Industry: ${industry || 'technology'}. 
-Centric composition, white or transparent background, high quality, vector style.`;
+Colors: ${normalizedDirection.colors?.map((c: any) => c.hex).join(', ') || '#6366f1, #8b5cf6'}. 
+Industry: ${industry || 'technology'}. No text, vector style, white background.`;
 
         try {
-          const imageRes = await callBackend({
-            type: "image",
-            prompt: logoPrompt
-          });
+          const imageRes = await callBackend({ type: "image", prompt: logoPrompt });
           logoImageUrl = imageRes.logo;
-          console.log(`✅ Logo generated for proposal 1`);
         } catch (error) {
-          console.error(`❌ Error generating logo:`, error);
           logoImageUrl = generatePlaceholderLogo(brandName, normalizedDirection.colors?.[0]?.hex || '#6366f1');
         }
       } else {
         logoImageUrl = generatePlaceholderLogo(brandName, normalizedDirection.colors?.[0]?.hex || '#6366f1');
       }
 
-      // Generate icons for this proposal
       const icons: BrandIcon[] = [];
 
       if (i === 0) {
-        const iconNames = ['Logo Icon', 'Square Icon', 'Symbol', 'App Icon', 'Favicon', 'Badge'];
-        console.log(`🎨 Generating ${iconNames.length} real icons for main proposal...`);
+        let iconDefinitions = [];
+        try {
+          const serviceDiscoveryPrompt = `
+            Marca: "${brandName}". Descripción: "${description}".
+            Entrevista: "${chatContext || ''}".
+            Identifica los 6 servicios clave de este negocio para crear iconos para su web.
+            Usa nombres reales de servicios (ej: "Soporte Técnico", "Diseño", "SEO").
+            Responde en JSON: {"services": [{"name": "...", "description": "..."}]}
+          `;
+          const discoveryRes = await callBackend({ type: "chat", prompt: serviceDiscoveryPrompt });
+          const discoveryJson = discoveryRes.result || discoveryRes;
+          const discoveryData = typeof discoveryJson === 'string'
+            ? JSON.parse(discoveryJson.replace(/```json/g, '').replace(/```/g, ''))
+            : discoveryJson;
+          iconDefinitions = (discoveryData.services || []).slice(0, 6);
+        } catch (e) {
+          iconDefinitions = [
+            { name: 'Servicio 1', description: 'Descripción 1' },
+            { name: 'Servicio 2', description: 'Descripción 2' },
+            { name: 'Servicio 3', description: 'Descripción 3' },
+            { name: 'Servicio 4', description: 'Descripción 4' },
+            { name: 'Servicio 5', description: 'Descripción 5' },
+            { name: 'Servicio 6', description: 'Descripción 6' }
+          ];
+        }
 
-        for (let j = 0; j < iconNames.length; j++) {
-          const iconPrompt = `Minimalist flat icon of a ${iconNames[j]} for the brand "${brandName}". 
-Concept: ${normalizedDirection.iconStyle || normalizedDirection.mood}. 
-Colors: ${normalizedDirection.colors?.[0]?.hex || '#6366f1'}. 
-Simple geometric shape, vector style, white background.`;
+        for (let j = 0; j < iconDefinitions.length; j++) {
+          const def = iconDefinitions[j];
+          const primaryHex = normalizedDirection.colors?.[0]?.hex || '#6366f1';
+
+          const iconPrompt = `
+            Modern Web Service Icon for "${def.name}".
+            Visual concept: ${def.description || def.name}.
+            Industry Context: ${industry}.
+            Design Style: High-quality modern glassmorphism or 3D render style but simplified, soft shadows, vibrant ${primaryHex} gradients.
+            Shape: Perfectly centered inside a soft rounded square background.
+            Composition: Clean vector-like lines, minimalist but premium.
+            Output: High definition, professional web illustration, centered, NO text.
+            Background: Transparent background.
+          `;
 
           try {
             const iconRes = await callBackend({
@@ -230,34 +252,41 @@ Simple geometric shape, vector style, white background.`;
               prompt: iconPrompt
             });
             icons.push({
-              name: iconNames[j],
-              svg: iconRes.logo, // The backend returns the URL as 'logo'
-              description: `Icono ${iconNames[j]} generado`
+              name: def.name,
+              svg: iconRes.logo,
+              description: def.description || `Icono de ${def.name}`
             });
-            console.log(`✅ Icon ${j + 1}/${iconNames.length} generated`);
-            await delay(500); // Guard delay
+            console.log(`✅ Icon ${j + 1}/6 (${def.name}) generated`);
+            await delay(400); // Guard delay
           } catch (error) {
             console.error(`❌ Error generating icon ${j}:`, error);
-            icons.push(generateFallbackIcon(iconNames[j].toLowerCase()));
+            icons.push(generateFallbackIcon(def.name.toLowerCase()));
           }
         }
       } else {
-        // Fallback for secondary proposals
+        // Fallback for secondary proposals icons
         const fallbackIconNames = ['home', 'search', 'user', 'settings', 'heart', 'star'];
         for (const iconName of fallbackIconNames) {
           icons.push(generateFallbackIcon(iconName));
         }
       }
 
-
-      // Icons already generated above in the loop
-
+      // HELPER: Saneado de strings para evitar que objetos de la IA crasheen React
+      const safeStr = (val: any, fallback: string = ""): string => {
+        if (!val) return fallback;
+        if (typeof val === 'string') return val;
+        // Si la IA devolvió un objeto con keys como {nombre, estilo} o {texto, valor}
+        if (typeof val === 'object') {
+          return val.nombre || val.texto || val.name || val.text || val.valor || val.value || JSON.stringify(val);
+        }
+        return String(val);
+      };
 
       proposals.push({
         id: i + 1,
-        name: normalizedDirection.name || `Propuesta ${i + 1}`,
-        description: normalizedDirection.description || `Diseño ${normalizedDirection.mood || 'modern'} para ${brandName}`,
-        mood: normalizedDirection.mood || 'modern',
+        name: safeStr(normalizedDirection.name, `Propuesta ${i + 1}`),
+        description: safeStr(normalizedDirection.description, `Diseño para ${brandName}`),
+        mood: safeStr(normalizedDirection.mood, 'moderno'),
         logo: logoImageUrl,
         colorScheme: normalizedDirection.colors?.map((c: any) => c.hex || c) || ['#6366f1', '#8b5cf6', '#ec4899', '#f9fafb', '#111827', '#ffffff'],
         colors: normalizedDirection.colors || generateFallbackColors(),
@@ -276,7 +305,7 @@ Simple geometric shape, vector style, white background.`;
 
     const mainProposal = proposals[0];
 
-    return {
+    const brandingResult = {
       brandName,
       tagline: generateTagline(brandName, description),
       logo: mainProposal.logo,
@@ -288,11 +317,18 @@ Simple geometric shape, vector style, white background.`;
         name: p.name,
         description: p.description,
         colorScheme: p.colorScheme,
-        typography: `${p.typography.heading.name} + ${p.typography.body.name}`,
+        typography: {
+          titulo: p.typography?.heading?.name || 'Inter',
+          cuerpo: p.typography?.body?.name || 'DM Sans'
+        },
         mood: p.mood,
         applications: p.applications,
+        logo: p.logo,
+        icons: p.icons
       })),
     };
+
+    return brandingResult;
 
   } catch (error) {
     console.error('❌ Error in backend branding generation:', error);
@@ -347,20 +383,24 @@ export async function getAIResponse(messages: { role: string; content: string }[
       parts: [{ text: m.content }]
     }));
 
-    const systemInstruction = `Eres BrandGen AI, un diseñador experto y asistente de branding.
-Tu objetivo principal es hacerle preguntas al usuario sobre su empresa para crearle una identidad de marca profesional (logo, paletas, tipografías).
+    const systemInstruction = `Eres BrandGen AI, un Consultor de Branding de Élite de la agencia 'Brand Genius'.
+Tu misión es guiar al usuario en una entrevista de branding 1-a-1 fluida para descubrir su esencia.
 
-REGLAS OBLIGATORIAS:
-1. Haz SOLO UNA pregunta a la vez. No abrume al usuario.
-2. NUNCA repitas una pregunta que ya hayas hecho o sobre la que el usuario ya te haya dado información. Analiza el historial cuidadosamente.
-3. Sé profesional, amable y extremadamente conciso (máximo 2 a 3 oraciones por respuesta).
-4. La información clave que necesitas saber de la empresa es:
-   - Su público objetivo.
-   - Su propuesta de valor o qué la hace única.
-   - Si prefiere algún estilo visual o colores (moderno, elegante, corporativo, colorido).
-5. Si consideras que el usuario ya ha proporcionado suficiente información sobre esos puntos (o si el usuario dice que ya terminó o quiere generar el logo), debes decirle EXPLÍCITAMENTE esto: 
-   "¡Perfecto! Tengo toda la información que necesito para crear algo increíble. Por favor, haz clic en el botón superior que dice '✨ Generar Branding' para que pueda entregarte las 5 propuestas con tus logos e iconos reales."
-`;
+REGLAS DE ORO (INCUMPLIMIENTO = DESPIDO INMEDIATO):
+1. **PROHIBIDO EL BOMBARDEO**: NUNCA, bajo ningún concepto, hagas más de UNA (1) pregunta por mensaje.
+2. **SIN LISTAS NI CUESTIONARIOS**: No uses viñetas, números, guiones ni párrafos con múltiples preguntas. Si detecto un signo de interrogación secundario, es un fallo crítico.
+3. **DESCUBRIMIENTO DE SERVICIOS**: Es OBLIGATORIO preguntar específicamente: "¿Qué servicios o productos ofreces exactamente?" al inicio. Necesitamos esto para diseñar los iconos de la web.
+4. **BREVEDAD ESTRATÉGICA**: Máximo 15 palabras por respuesta. Sé directo, profesional e incisivo.
+5. **NO REPETIR**: Si el usuario ya dio un dato, no lo pidas otra vez.
+
+FLUJO DE ENTREVISTA:
+- Paso 1: Nombre y Servicios (Prioritario).
+- Paso 2: Público objetivo.
+- Paso 3: Valores o Mood (Moderno, Clásico, Innovador, etc.).
+
+FINALIZACIÓN (Solo tras tener los servicios específicos):
+Di EXACTAMENTE:
+"¡Excelente! Tengo una visión clara de lo que necesitamos. Tu identidad de marca está lista para nacer. Por favor, haz clic en el botón **'✨ Generar Branding'** que ha aparecido aquí abajo para ver las 5 propuestas exclusivas que he diseñado para ti."`;
 
     const { result } = await callBackend({
       type: "chat",
@@ -432,7 +472,10 @@ function generateFallbackBranding(brandName: string, description: string): Brand
     name: `${proposalNames[i]} ${brandName}`,
     description: `Una propuesta ${mood} que captura la esencia de ${brandName}. ${description}`,
     colorScheme: colors.map(c => c.hex),
-    typography: 'Inter + DM Sans',
+    typography: {
+      titulo: 'Inter',
+      cuerpo: 'DM Sans'
+    },
     mood,
     applications: ['Website', 'Business cards', 'Social media', 'Email signature'],
   }));
@@ -492,28 +535,55 @@ function generateTagline(brandName: string, _description: string): string {
   return taglines[index];
 }
 
-// ===== PROJECT MANAGEMENT =====
-export function saveProject(project: BrandProject): void {
-  const projects = getProjects();
-  const existingIndex = projects.findIndex(p => p.id === project.id);
+// ===== PROJECT MANAGEMENT (Via Backend) =====
+export async function saveProject(project: BrandProject): Promise<void> {
+  try {
+    const response = await fetch(`${BASE_URL}/projects`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(project),
+    });
 
-  if (existingIndex >= 0) {
-    projects[existingIndex] = project;
-  } else {
-    projects.push(project);
+    if (!response.ok) throw new Error('Error saving project to backend');
+
+    // Al guardar, el backend devuelve el proyecto con las URLs de las imágenes actualizadas
+    const savedProject = await response.json();
+    console.log('✅ Project saved to backend:', savedProject.id);
+  } catch (error) {
+    console.error('❌ Error saving project:', error);
+    // Fallback social to localStorage if backend fails
+    const projects = await getProjects();
+    const existingIndex = projects.findIndex(p => p.id === project.id);
+    if (existingIndex >= 0) projects[existingIndex] = project;
+    else projects.push(project);
+    localStorage.setItem('brandgen_projects', JSON.stringify(projects));
   }
-
-  localStorage.setItem('brandgen_projects', JSON.stringify(projects));
 }
 
-export function getProjects(): BrandProject[] {
-  const stored = localStorage.getItem('brandgen_projects');
-  return stored ? JSON.parse(stored) : [];
+export async function getProjects(): Promise<BrandProject[]> {
+  try {
+    const response = await fetch(`${BASE_URL}/projects`);
+    if (!response.ok) throw new Error('Error fetching projects from backend');
+    return await response.json();
+  } catch (error) {
+    console.error('❌ Error fetching projects:', error);
+    const stored = localStorage.getItem('brandgen_projects');
+    return stored ? JSON.parse(stored) : [];
+  }
 }
 
-export function deleteProject(id: string): void {
-  const projects = getProjects().filter(p => p.id !== id);
-  localStorage.setItem('brandgen_projects', JSON.stringify(projects));
+export async function deleteProject(id: string): Promise<void> {
+  try {
+    const response = await fetch(`${BASE_URL}/projects/${id}`, {
+      method: 'DELETE',
+    });
+    if (!response.ok) throw new Error('Error deleting project from backend');
+    console.log('✅ Project deleted from backend:', id);
+  } catch (error) {
+    console.error('❌ Error deleting project:', error);
+    const projects = (await getProjects()).filter(p => p.id !== id);
+    localStorage.setItem('brandgen_projects', JSON.stringify(projects));
+  }
 }
 
 export function generateId(): string {

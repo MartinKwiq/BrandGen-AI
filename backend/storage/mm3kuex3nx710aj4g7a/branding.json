@@ -1,0 +1,497 @@
+{
+  "id": "mm3kuex3nx710aj4g7a",
+  "name": "AMG Web Solutions",
+  "description": "Agencia de diseño web",
+  "createdAt": "2026-02-26T14:47:11.367Z",
+  "updatedAt": "2026-02-26T15:11:26.144Z",
+  "status": "completed",
+  "messages": [
+    {
+      "id": "mm3kuex3bamzz9dkb79",
+      "role": "assistant",
+      "content": "¡Hola! Soy BrandGen AI, tu consultor de branding. He creado el proyecto \"AMG Web Solutions\" basándome en tu descripción. Para empezar a diseñar tu identidad ideal, cuéntame un poco más sobre el propósito principal de tu negocio. ¿Qué es lo que quieres lograr con esta marca?",
+      "timestamp": "2026-02-26T14:47:11.367Z"
+    },
+    {
+      "id": "mm3kuwcoarld920qc7n",
+      "role": "user",
+      "content": "Crear una presencia digital Y posicionar la marca Amg websolutions",
+      "timestamp": "2026-02-26T14:47:33.960Z"
+    },
+    {
+      "id": "mm3kv3ziyzvb6v9y32",
+      "role": "assistant",
+      "content": "¡Excelente! \"Crear una presencia digital y posicionar la marca\" son los *resultados* que buscamos. Ahora, para definir el *cómo* y el *porqué* de esos resultados, necesito entender la esencia de AMG Web Solutions.\n\nPara empezar a construir una estrategia sólida, por favor, responde a las siguientes preguntas clave. Cuanta más información me des, mejor podré afinar el diseño de tu identidad ideal:\n\n1.  **Misión y Propósito:** ¿Cuál es la *misión principal* de AMG Web Solutions? Más allá de crear webs, ¿qué problema clave resuelves para tus clientes o qué valor fundamental les aportas? ¿Cuál es tu visión a largo plazo para la empresa?\n2.  **Cliente Ideal:** ¿Quién es tu *cliente ideal*? Describe un poco a esas empresas o personas: ¿son startups, PYMES consolidadas, profesionales independientes, e-commerce? ¿Cuáles son sus principales desafíos o necesidades en relación con su presencia digital?\n3.  **Servicios Clave:** ¿Qué tipo de servicios específicos ofrece o planea ofrecer AMG Web Solutions? (Por ejemplo: Diseño web, desarrollo a medida, optimización SEO, marketing digital, gestión de redes sociales, consultoría, etc.)\n4.  **Diferenciación:** ¿Qué hace a AMG Web Solutions *única* en el mercado? ¿Qué te diferencia de otros proveedores de soluciones web? ¿Es la velocidad, la creatividad, un soporte excepcional, una especialización en un sector específico, la relación calidad-precio?\n5.  **Personalidad de Marca:** Si tu marca fuera una persona, ¿cómo la describirías? ¿Es innovadora, amigable, experta, vanguardista, confiable, eficiente, creativa, moderna, accesible?\n6.  **Percepción Deseada:** Cuando un cliente interactúa con AMG Web Solutions o ve tu marca, ¿qué emoción o sensación quieres que experimente? (Confianza, alivio, inspiración, seguridad, emoción por el futuro de su negocio).\n7.  **Palabras Clave:** ¿Qué tres a cinco palabras clave te gustaría que la gente asociara inmediatamente con AMG Web Solutions?\n\n¡Espero tus respuestas para seguir adelante!",
+      "timestamp": "2026-02-26T14:47:43.854Z"
+    },
+    {
+      "id": "mm3kxulv5641r2ior4m",
+      "role": "user",
+      "content": "Sale una pregunta a la vez si no la entrevista se hace muy complicada para responderla en un solo chat",
+      "timestamp": "2026-02-26T14:49:51.667Z"
+    },
+    {
+      "id": "mm3kxvwu7agjtqosdqr",
+      "role": "assistant",
+      "content": "¡Tienes toda la razón! Mil disculpas. Mi objetivo es facilitar este proceso, no complicarlo.\n\nVamos a hacerlo pregunta por pregunta. Así podremos profundizar en cada aspecto sin abrumarte.\n\n**Pregunta 1 de 7: Misión y Propósito**\n\n¿Cuál es la *misión principal* de AMG Web Solutions? Más allá de crear webs, ¿qué problema clave resuelves para tus clientes o qué valor fundamental les aportas? ¿Cuál es tu visión a largo plazo para la empresa?",
+      "timestamp": "2026-02-26T14:49:53.358Z"
+    },
+    {
+      "id": "mm3kz284arfdymebulh",
+      "role": "user",
+      "content": "Crear diseños custom personalizados para esas personas para esos clientes que vamos a queremos llegar y tener ¿Eh? Utilizando tecnología como la IA Que resuelva Las necesidades del cliente en en un tiempo mínimo Para que puedan tener su página web lo antes posible",
+      "timestamp": "2026-02-26T14:50:48.196Z"
+    },
+    {
+      "id": "mm3kz3pdx1ca1yhmgp",
+      "role": "assistant",
+      "content": "¡Excelente! Eso es muy claro y potente.\n\n**Resumen de tu Misión y Propósito:**\nAMG Web Solutions busca crear diseños web custom y personalizados, utilizando tecnología como la IA para resolver las necesidades del cliente en un tiempo mínimo, permitiéndoles tener su página web lo antes posible.\n\nEsto ya nos da una base fantástica: **personalización, eficiencia, rapidez y tecnología de vanguardia (IA)**.\n\n---\n\nPasemos a la siguiente pregunta:\n\n**Pregunta 2 de 7: Cliente Ideal**\n\n¿Quién es tu *cliente ideal*? Describe un poco a esas empresas o personas: ¿son startups, PYMES consolidadas, profesionales independientes, e-commerce? ¿Cuáles son sus principales desafíos o necesidades en relación con su presencia digital?",
+      "timestamp": "2026-02-26T14:50:50.113Z"
+    },
+    {
+      "id": "mm3l0amldz91rqurl5",
+      "role": "user",
+      "content": "En AMG web Solutions no tenemos un cliente ideal todos son los clientes ideales nos ajustamos a cualquier tipo de propuesta empresa sea PYMES sea una gran empresa o un una persona que quiera tener su propia página web para su Desarrollo profesional Todos nuestros clientes son importantes para nosotros",
+      "timestamp": "2026-02-26T14:51:45.741Z"
+    },
+    {
+      "id": "mm3l0crgsr63dkkv85",
+      "role": "assistant",
+      "content": "Entendido. Es una perspectiva interesante y que subraya la adaptabilidad de AMG Web Solutions.\n\n**Resumen sobre Cliente Ideal:**\nAMG Web Solutions no se limita a un nicho específico; considera que \"todos son clientes ideales\". Se ajusta a cualquier tipo de propuesta o empresa, desde PYMES y grandes empresas hasta profesionales independientes que buscan una web para su desarrollo profesional. Todos los clientes son importantes.\n\nEsto nos indica que tu propuesta de valor debe ser lo suficientemente flexible y universal para atraer y satisfacer a un espectro amplio de necesidades. La **adaptabilidad** y la **capacidad de escalar soluciones** serán clave.\n\n---\n\nPasemos a la siguiente pregunta:\n\n**Pregunta 3 de 7: Servicios Clave**\n\n¿Qué tipo de servicios específicos ofrece o planea ofrecer AMG Web Solutions? (Por ejemplo: Diseño web, desarrollo a medida, optimización SEO, marketing digital, gestión de redes sociales, consultoría, etc.)",
+      "timestamp": "2026-02-26T14:51:48.508Z"
+    },
+    {
+      "id": "mm3l1ylkna729c2ehgf",
+      "role": "user",
+      "content": "Yo creo que casi todas entran dentro de nuestro rubro y a lo que queremos llegar como empresa la única que descartaría por ahora sería la gestión de redes sociales ya que esa parte todavía no la estamos implementando en la empresa",
+      "timestamp": "2026-02-26T14:53:03.464Z"
+    },
+    {
+      "id": "mm3l20u2xph5eg2rpnd",
+      "role": "assistant",
+      "content": "Perfecto, ¡eso nos da un alcance muy claro!\n\n**Resumen sobre Servicios Clave:**\nAMG Web Solutions ofrece o planea ofrecer la mayoría de los servicios relacionados con soluciones digitales, incluyendo:\n*   Diseño web\n*   Desarrollo a medida\n*   Optimización SEO\n*   Marketing digital\n*   Consultoría\n\nEl único servicio que *no* se incluiría por ahora es la gestión de redes sociales.\n\nEsto nos muestra una oferta de servicios integral, enfocada en la creación y potenciación de la presencia digital, con un fuerte énfasis en la parte técnica y estratégica.\n\n---\n\nPasemos a la siguiente pregunta:\n\n**Pregunta 4 de 7: Diferenciación**\n\n¿Qué hace a AMG Web Solutions *única* en el mercado? ¿Qué te diferencia de otros proveedores de soluciones web? ¿Es la velocidad, la creatividad, un soporte excepcional, una especialización en un sector específico, la relación calidad-precio?",
+      "timestamp": "2026-02-26T14:53:06.362Z"
+    },
+    {
+      "id": "mm3l3p6x8z61eyq507g",
+      "role": "user",
+      "content": "Yo creo que tu última pregunta es la respuesta perfecta La velocidad que tenemos la creatividad un soporte excepcional y una especialización en un sector específico la relación calidad precio son características que tenemos pero también podemos agregar Que utilizamos la IA para generar el código para poder optimizarlo y hacerlo mucho más rápido sin demoras y poder tener una página web en tiempo récord",
+      "timestamp": "2026-02-26T14:54:24.585Z"
+    },
+    {
+      "id": "mm3l3r3icvxg88e8edc",
+      "role": "assistant",
+      "content": "¡Fantástico! Esa respuesta es sumamente rica y define claramente tu propuesta de valor.\n\n**Resumen sobre Diferenciación:**\nAMG Web Solutions se distingue por una combinación potente de factores:\n*   **Velocidad:** Capacidad de entrega rápida.\n*   **Creatividad:** Diseños innovadores y personalizados.\n*   **Soporte Excepcional:** Atención y acompañamiento de alta calidad.\n*   **Especialización en un Sector Específico:** Aunque atiendes a todos, esto sugiere una profundidad de conocimiento en ciertas áreas (tendremos que explorarlo más adelante si es relevante para el mensaje).\n*   **Relación Calidad-Precio:** Ofrecer un gran valor por la inversión.\n*   **Tecnología IA para Optimización y Rapidez:** El factor más distintivo y disruptivo es el uso de Inteligencia Artificial para generar y optimizar código, lo que permite una creación de páginas web en \"tiempo récord\" y sin demoras.\n\nEsta última característica, el uso de IA para la velocidad y la optimización del código, es un diferenciador muy potente y moderno que definitivamente debe ser un pilar en tu branding.\n\n---\n\nPasemos a la siguiente pregunta:\n\n**Pregunta 5 de 7: Personalidad de Marca**\n\nSi tu marca fuera una persona, ¿cómo la describirías? ¿Es innovadora, amigable, experta, vanguardista, confiable, eficiente, creativa, moderna, accesible? Puedes elegir varias o añadir las tuyas.",
+      "timestamp": "2026-02-26T14:54:27.054Z"
+    },
+    {
+      "id": "mm3l4ow3beozad3o4uw",
+      "role": "user",
+      "content": "Yo creo que somos innovadores amigables modernos Tecnológicos Eficientes creativos Accesible",
+      "timestamp": "2026-02-26T14:55:10.851Z"
+    },
+    {
+      "id": "mm3l4qwgp3hqiewmjk",
+      "role": "assistant",
+      "content": "¡Excelente! Esa es una personalidad de marca muy completa y atractiva.\n\n**Resumen sobre Personalidad de Marca:**\nAMG Web Solutions se describe como:\n*   **Innovador:** Constantemente buscando nuevas soluciones y enfoques.\n*   **Amigable:** Cercano y fácil de interactuar con los clientes.\n*   **Moderno:** Al día con las últimas tendencias y estéticas.\n*   **Tecnológico:** Orientado a la implementación de tecnología avanzada (como la IA).\n*   **Eficiente:** Realiza el trabajo de manera efectiva y sin desperdicios.\n*   **Creativo:** Ofrece soluciones originales y estéticamente atractivas.\n*   **Accesible:** Fácil de contactar y entender, posiblemente también en términos de precio o entrada para diferentes tipos de clientes.\n\nEsta combinación es fantástica, ya que equilibra la alta tecnología y la eficiencia con la cercanía y la creatividad humana.\n\n---\n\nPasemos a la penúltima pregunta:\n\n**Pregunta 6 de 7: Percepción Deseada**\n\nCuando un cliente interactúa con AMG Web Solutions o ve tu marca, ¿qué emoción o sensación quieres que experimente? (Confianza, alivio, inspiración, seguridad, emoción por el futuro de su negocio, empoderamiento, sorpresa positiva, tranquilidad). Puedes elegir varias o añadir las tuyas.",
+      "timestamp": "2026-02-26T14:55:13.456Z"
+    },
+    {
+      "id": "mm3l64ecgh4nuq42jz5",
+      "role": "user",
+      "content": "Yo creo que todas juntas Todo eso quiero que un cliente sienta que sienta que tiene un amigo ¿Qué le va a saber decir cu Está equivocado y cuando no lo está Poder mostrarle de manera eficiente ¿Cómo va a quedar su proyecto y que el cliente se sienta conforme Y que tenga lo que él desea",
+      "timestamp": "2026-02-26T14:56:17.604Z"
+    },
+    {
+      "id": "mm3l66vbc3njo8ag7sk",
+      "role": "assistant",
+      "content": "¡Perfecto! Eso es muy ambicioso y denota un deseo profundo de construir relaciones sólidas con tus clientes.\n\n**Resumen sobre Percepción Deseada:**\nAMG Web Solutions aspira a que sus clientes experimenten un abanico completo de emociones y sensaciones positivas, incluyendo:\n*   **Confianza:** Saber que están en buenas manos.\n*   **Alivio/Tranquilidad:** Dejar en manos expertas su proyecto.\n*   **Inspiración:** Ver el potencial de su presencia digital.\n*   **Seguridad:** Saber que su proyecto será manejado profesionalmente.\n*   **Emoción por el futuro de su negocio/Empoderamiento:** Visualizar el impacto positivo de su nueva web.\n*   **Sorpresa Positiva:** Por la rapidez, calidad o el resultado final.\n*   **Sentirse como si tuvieran un amigo:** Un socio confiable que les guiará honestamente, señalando aciertos y errores.\n*   **Conformidad y Satisfacción:** Con el resultado final y el proceso.\n*   **Obtener lo que desea:** Ver sus ideas materializadas de forma eficiente y visualmente clara (cómo va a quedar su proyecto).\n\nEsto refuerza la idea de una marca que no solo entrega un producto, sino una **experiencia integral de acompañamiento, asesoramiento honesto y realización de expectativas**, todo ello envuelto en una relación cercana y de confianza.\n\n---\n\nY ahora, la última pregunta para cerrar esta fase de recopilación de información:\n\n**Pregunta 7 de 7: Palabras Clave**\n\n¿Qué tres a cinco palabras clave te gustaría que la gente asociara inmediatamente con AMG Web Solutions?",
+      "timestamp": "2026-02-26T14:56:20.807Z"
+    },
+    {
+      "id": "mm3lmy1rchrbxjvtwkl",
+      "role": "user",
+      "content": "Profesional Aplicada Moderna Amistosa",
+      "timestamp": "2026-02-26T15:09:22.527Z"
+    },
+    {
+      "id": "mm3ln1pkumzx2qbyx1",
+      "role": "assistant",
+      "content": "¡Perfecto! Esas cuatro palabras clave capturan la esencia de lo que hemos estado construyendo.\n\n**Resumen sobre Palabras Clave:**\nTe gustaría que la gente asociara inmediatamente AMG Web Solutions con las siguientes palabras:\n*   **Profesional:** Subraya la expertise, la calidad y la seriedad del servicio.\n*   **Aplicada:** Sugiere soluciones prácticas, eficientes y enfocadas en resultados concretos.\n*   **Moderna:** Refleja la innovación, el uso de tecnología avanzada (IA) y un diseño actualizado.\n*   **Amistosa:** Destaca la cercanía, la accesibilidad y la relación de confianza con el cliente.\n\n---\n\n¡Excelente trabajo! Hemos completado la fase de recopilación de información detallada.\n\nAhora tengo una base muy sólida para entender la esencia de AMG Web Solutions. Con tus respuestas, puedo ver claramente una marca que equilibra la **vanguardia tecnológica (IA)** con la **cercanía y el trato humano**, ofreciendo **soluciones rápidas, eficientes y personalizadas** para un amplio espectro de clientes, siempre con un enfoque **profesional y moderno**.\n\n**Siguiente paso:**\nCon toda esta información, voy a sintetizar los pilares de tu marca para que podamos empezar a definir los elementos de tu identidad.\n\nPermíteme un momento para procesar todo esto y te presentaré un resumen consolidado de la identidad central de AMG Web Solutions.",
+      "timestamp": "2026-02-26T15:09:27.272Z"
+    },
+    {
+      "id": "mm3lnq28ap8d3kpvcot",
+      "role": "user",
+      "content": "Claro que sí",
+      "timestamp": "2026-02-26T15:09:58.832Z"
+    },
+    {
+      "id": "mm3lnq2n57gxvuraom6",
+      "role": "assistant",
+      "content": "¡Hemos conversado bastante! Creo que ya tengo lo suficiente. Por favor, haz clic en el botón **'✨ Generar Branding'** aquí abajo para ver tus propuestas.",
+      "timestamp": "2026-02-26T15:09:58.847Z"
+    },
+    {
+      "id": "mm3lplfkkm7f93f2tg9",
+      "role": "assistant",
+      "content": "¡He generado tu branding completo con 5 propuestas únicas! Cada propuesta incluye un logo profesional, paleta de 6 colores, 2 tipografías y 6 iconos concordantes. Explora las diferentes propuestas y elige la que mejor represente tu marca.",
+      "timestamp": "2026-02-26T15:11:26.144Z"
+    }
+  ],
+  "canGenerate": true,
+  "branding": {
+    "brandName": "AMG Web Solutions",
+    "tagline": "El futuro de tu marca",
+    "logo": "/api/projects/mm3kuex3nx710aj4g7a/images/logo_main_1772118686384_8adav.png",
+    "colors": [
+      {
+        "hex": "#0000FF",
+        "uso": "Azul Eléctrico: Principal, para energía y tecnología."
+      },
+      {
+        "hex": "#8A2BE2",
+        "uso": "Violeta Neón: Acento, para innovación y creatividad."
+      },
+      {
+        "hex": "#00FFFF",
+        "uso": "Cian Brillante: Secundario, para modernidad y fluidez."
+      },
+      {
+        "hex": "#20232A",
+        "uso": "Gris Oscuro: Texto principal, solidez."
+      },
+      {
+        "hex": "#F0F0F0",
+        "uso": "Blanco Cálido: Fondos, claridad."
+      },
+      {
+        "hex": "#FFD700",
+        "uso": "Oro Digital: Toque de lujo/calidad en detalles."
+      }
+    ],
+    "typography": {
+      "heading": {
+        "name": "Inter",
+        "fontFamily": "Inter, sans-serif",
+        "usage": "Títulos",
+        "googleFont": "Inter"
+      },
+      "body": {
+        "name": "DM Sans",
+        "fontFamily": "DM Sans, sans-serif",
+        "usage": "Cuerpo",
+        "googleFont": "DM Sans"
+      }
+    },
+    "icons": [
+      {
+        "name": "Logo Icon",
+        "svg": "/api/projects/mm3kuex3nx710aj4g7a/images/icon_main_0_1772118686386_exs1b.png",
+        "description": "Icono del logotipo"
+      },
+      {
+        "name": "Service 1",
+        "svg": "/api/projects/mm3kuex3nx710aj4g7a/images/icon_main_1_1772118686387_ox7hg.png",
+        "description": "Servicio principal"
+      },
+      {
+        "name": "Service 2",
+        "svg": "/api/projects/mm3kuex3nx710aj4g7a/images/icon_main_2_1772118686392_1vbu6.png",
+        "description": "Servicio secundario"
+      },
+      {
+        "name": "App Icon",
+        "svg": "/api/projects/mm3kuex3nx710aj4g7a/images/icon_main_3_1772118686394_1btnu.png",
+        "description": "Icono de aplicación"
+      },
+      {
+        "name": "Favicon",
+        "svg": "/api/projects/mm3kuex3nx710aj4g7a/images/icon_main_4_1772118686395_w6qxy.png",
+        "description": "Icono de pestaña"
+      },
+      {
+        "name": "Badge",
+        "svg": "/api/projects/mm3kuex3nx710aj4g7a/images/icon_main_5_1772118686396_1kts8.png",
+        "description": "Insignia de marca"
+      }
+    ],
+    "proposals": [
+      {
+        "id": 1,
+        "name": "Propuesta 1",
+        "description": "Diseño para AMG Web Solutions",
+        "colorScheme": [
+          "#0000FF",
+          "#8A2BE2",
+          "#00FFFF",
+          "#20232A",
+          "#F0F0F0",
+          "#FFD700"
+        ],
+        "typography": "Inter + DM Sans",
+        "mood": "moderno",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm3kuex3nx710aj4g7a/images/logo_prop_0_1772118686398_1g0rm.png",
+        "icons": [
+          {
+            "name": "Logo Icon",
+            "svg": "/api/projects/mm3kuex3nx710aj4g7a/images/icon_prop_0_0_1772118686399_bqebh.png",
+            "description": "Icono del logotipo"
+          },
+          {
+            "name": "Service 1",
+            "svg": "/api/projects/mm3kuex3nx710aj4g7a/images/icon_prop_0_1_1772118686400_29p2v.png",
+            "description": "Servicio principal"
+          },
+          {
+            "name": "Service 2",
+            "svg": "/api/projects/mm3kuex3nx710aj4g7a/images/icon_prop_0_2_1772118686402_3t8so.png",
+            "description": "Servicio secundario"
+          },
+          {
+            "name": "App Icon",
+            "svg": "/api/projects/mm3kuex3nx710aj4g7a/images/icon_prop_0_3_1772118686403_1zvmv.png",
+            "description": "Icono de aplicación"
+          },
+          {
+            "name": "Favicon",
+            "svg": "/api/projects/mm3kuex3nx710aj4g7a/images/icon_prop_0_4_1772118686404_mmwyi.png",
+            "description": "Icono de pestaña"
+          },
+          {
+            "name": "Badge",
+            "svg": "/api/projects/mm3kuex3nx710aj4g7a/images/icon_prop_0_5_1772118686406_9r6bw.png",
+            "description": "Insignia de marca"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Propuesta 2",
+        "description": "Diseño para AMG Web Solutions",
+        "colorScheme": [
+          "#3B3F63",
+          "#FF6B6B",
+          "#4ECDC4",
+          "#1E202B",
+          "#F8F8F2",
+          "#FFC300"
+        ],
+        "typography": "Inter + DM Sans",
+        "mood": "moderno",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm3kuex3nx710aj4g7a/images/logo_prop_1_1772118686407_t61sb.png",
+        "icons": [
+          {
+            "name": "home",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg>",
+            "description": "Icono de home"
+          },
+          {
+            "name": "search",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg>",
+            "description": "Icono de search"
+          },
+          {
+            "name": "user",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg>",
+            "description": "Icono de user"
+          },
+          {
+            "name": "settings",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24\"/></svg>",
+            "description": "Icono de settings"
+          },
+          {
+            "name": "heart",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>",
+            "description": "Icono de heart"
+          },
+          {
+            "name": "star",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+            "description": "Icono de star"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Propuesta 3",
+        "description": "Diseño para AMG Web Solutions",
+        "colorScheme": [
+          "#2C3E50",
+          "#1ABC9C",
+          "#F39C12",
+          "#34495E",
+          "#ECF0F1",
+          "#95A5A6"
+        ],
+        "typography": "Inter + DM Sans",
+        "mood": "moderno",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm3kuex3nx710aj4g7a/images/logo_prop_2_1772118686407_pf2c0.png",
+        "icons": [
+          {
+            "name": "home",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg>",
+            "description": "Icono de home"
+          },
+          {
+            "name": "search",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg>",
+            "description": "Icono de search"
+          },
+          {
+            "name": "user",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg>",
+            "description": "Icono de user"
+          },
+          {
+            "name": "settings",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24\"/></svg>",
+            "description": "Icono de settings"
+          },
+          {
+            "name": "heart",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>",
+            "description": "Icono de heart"
+          },
+          {
+            "name": "star",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+            "description": "Icono de star"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Propuesta 4",
+        "description": "Diseño para AMG Web Solutions",
+        "colorScheme": [
+          "#007bff",
+          "#ffc107",
+          "#28a745",
+          "#343a40",
+          "#f8f9fa",
+          "#6c757d"
+        ],
+        "typography": "Inter + DM Sans",
+        "mood": "moderno",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm3kuex3nx710aj4g7a/images/logo_prop_3_1772118686408_dxank.png",
+        "icons": [
+          {
+            "name": "home",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg>",
+            "description": "Icono de home"
+          },
+          {
+            "name": "search",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg>",
+            "description": "Icono de search"
+          },
+          {
+            "name": "user",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg>",
+            "description": "Icono de user"
+          },
+          {
+            "name": "settings",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24\"/></svg>",
+            "description": "Icono de settings"
+          },
+          {
+            "name": "heart",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>",
+            "description": "Icono de heart"
+          },
+          {
+            "name": "star",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+            "description": "Icono de star"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Propuesta 5",
+        "description": "Diseño para AMG Web Solutions",
+        "colorScheme": [
+          "#6C7B8E",
+          "#84A98C",
+          "#CDB4DB",
+          "#3D405B",
+          "#E0F2F7",
+          "#FFDAB9"
+        ],
+        "typography": "Inter + DM Sans",
+        "mood": "moderno",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm3kuex3nx710aj4g7a/images/logo_prop_4_1772118686409_irit3.png",
+        "icons": [
+          {
+            "name": "home",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg>",
+            "description": "Icono de home"
+          },
+          {
+            "name": "search",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg>",
+            "description": "Icono de search"
+          },
+          {
+            "name": "user",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg>",
+            "description": "Icono de user"
+          },
+          {
+            "name": "settings",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24\"/></svg>",
+            "description": "Icono de settings"
+          },
+          {
+            "name": "heart",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>",
+            "description": "Icono de heart"
+          },
+          {
+            "name": "star",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+            "description": "Icono de star"
+          }
+        ]
+      }
+    ]
+  }
+}

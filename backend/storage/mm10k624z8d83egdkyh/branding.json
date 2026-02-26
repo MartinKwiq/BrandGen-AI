@@ -1,0 +1,388 @@
+{
+  "id": "mm10k624z8d83egdkyh",
+  "name": "AMG Web Solutions",
+  "description": "Agencia de diseño web",
+  "createdAt": "2026-02-24T19:43:48.652Z",
+  "updatedAt": "2026-02-24T19:45:52.526Z",
+  "status": "completed",
+  "messages": [
+    {
+      "id": "mm10k6246ypltr0l5yj",
+      "role": "assistant",
+      "content": "¡Hola! Soy BrandGen AI, tu asistente de branding. Cuéntame más sobre AMG Web Solutions. ¿Cuál es la misión de tu empresa y qué valores quieres transmitir a tus clientes?",
+      "timestamp": "2026-02-24T19:43:48.652Z"
+    },
+    {
+      "id": "mm10kglwpq1pbvbna9p",
+      "role": "user",
+      "content": "Necesito que generes un branding para hacer una prueba en esta misma aplicación sería para una agencia de diseño web",
+      "timestamp": "2026-02-24T19:44:02.324Z"
+    },
+    {
+      "id": "mm10kueay8piyzjy3l",
+      "role": "assistant",
+      "content": "¡Excelente! Me encanta la idea de hacer una prueba de branding en vivo. Para AMG Web Solutions, una agencia de diseño web, vamos a construir una marca que transmita profesionalismo, innovación y resultados.\n\nAquí tienes una propuesta de branding completa para **AMG Web Solutions**:\n\n---\n\n## Branding para **AMG Web Solutions**\n\n### 1. Nombre de la Empresa\n\n*   **Nombre Principal:** AMG Web Solutions\n*   **Lema (Tagline):** \"Construyendo tu Éxito Digital\" o \"Diseño Web Estratégico, Resultados Tangibles.\"\n    *   *(Me inclinaría más por \"Construyendo tu Éxito Digital\" por su mensaje positivo y orientado a resultados.)*\n\n### 2. Misión y Visión\n\n*   **Misión:** Potenciar a empresas y emprendedores en el entorno digital a través de soluciones de diseño web innovadoras, funcionales y estratégicamente alineadas con sus objetivos de negocio, garantizando una presencia online impactante y efectiva.\n*   **Visión:** Ser reconocidos como el socio estratégico líder en diseño y desarrollo web, distinguiéndonos por la excelencia, la creatividad y la capacidad de transformar visiones en realidades digitales exitosas para nuestros clientes.\n\n### 3. Valores Fundamentales\n\n1.  **Innovación:** Nos mantenemos a la vanguardia de las tecnologías y tendencias de diseño para ofrecer soluciones modernas y futuristas.\n2.  **Excelencia:** Compromiso con la máxima calidad en cada proyecto, cuidando cada detalle desde la conceptualización hasta la implementación.\n3.  **Orientación a Resultados:** Enfocados en generar valor real y medible para nuestros clientes, no solo en entregar un diseño bonito.\n4.  **Colaboración:** Trabajamos mano a mano con nuestros clientes, entendiendo sus necesidades y convirtiéndonos en una extensión de su equipo.\n5.  **Transparencia:** Comunicación clara y honesta en cada etapa del proyecto, construyendo relaciones basadas en la confianza.\n\n### 4. Propuesta de Valor Única (PVU)\n\nAMG Web Solutions no solo diseña sitios web; creamos experiencias digitales estratégicas que impulsan el crecimiento y la visibilidad de tu negocio. Combinamos creatividad vanguardista con un enfoque centrado en la usabilidad y la conversión, asegurando que tu inversión digital se traduzca en resultados tangibles. Somos tu socio en el camino hacia el éxito digital.\n\n### 5. Público Objetivo\n\n*   Pequeñas y medianas empresas (PyMES) que buscan establecer o mejorar significativamente su presencia online.\n*   Emprendedores y startups que necesitan una plataforma digital sólida para lanzar sus proyectos.\n*   Empresas establecidas que requieren rediseños, optimización para dispositivos móviles o estrategias de marketing digital integradas.\n*   Clientes que valoran el diseño de calidad, la funcionalidad y un enfoque estratégico en su presencia web.\n\n### 6. Tono de Voz\n\n*   **Profesional y Confiable:** Transmitimos experiencia y seguridad en nuestro campo.\n*   **Innovador y Moderno:** Reflejamos nuestro conocimiento de las últimas tendencias y tecnologías.\n*   **Empático y Colaborativo:** Hablamos el idioma del cliente, comprendiendo sus desafíos y metas.\n*   **Directo y Orientado a Soluciones:** Nos enfocamos en cómo podemos resolver los problemas del cliente.\n*   **Inspirador:** Motivamos a nuestros clientes a ver el potencial ilimitado de su presencia digital.\n\n---\n\n### 7. Elementos Visuales (Concepto)\n\n*   **A. Concepto de Logotipo:**\n    *   **Estilo:** Minimalista, moderno, geométrico y con un toque de dinamismo.\n    *   **Ideas:**\n        *   Un icono abstracto que combine las iniciales \"A\", \"M\", \"G\" de forma fluida, o que represente una conexión, un nodo, un pixel ascendente o una flecha de crecimiento estilizada.\n        *   Podría ser una \"A\" con un trazo que se extiende y forma parte de una \"G\" o un elemento que sugiera código o construcción.\n        *   La tipografía del nombre \"AMG\" sería fuerte y limpia (sans-serif), mientras que \"Web Solutions\" podría ser ligeramente más ligera o en una fuente complementaria para el contraste.\n    *   **Ejemplo mental:** Piensa en un icono que evoque la construcción digital, la interconexión o el avance, integrado de forma sutil con las iniciales.\n\n*   **B. Paleta de Colores:**\n    *   **Colores Primarios:**\n        *   **Azul Eléctrico/Marino Oscuro:** (Ej. `#0A2463` o `#007bff`) Transmite confianza, profesionalismo, estabilidad y tecnología.\n        *   **Verde Aguamarina/Teal Brillante:** (Ej. `#20c997` o `#00D9CC`) Aporta frescura, innovación, crecimiento y un toque moderno/digital.\n    *   **Colores Secundarios/Neutros:**\n        *   **Gris Antracita/Grafito:** (Ej. `#343a40`) Sofisticación, fuerza, ideal para textos y fondos.\n        *   **Blanco Puro:** (Ej. `#ffffff`) Limpieza, claridad, amplitud, para contrastes y espacios negativos.\n    *   **Color de Acento (Opcional):**\n        *   Un toque de **Naranja Vibrante** (ej. `#FF6F00`) o **Amarillo Sol** (ej. `#FFC107`) para llamadas a la acción o elementos que requieran atención y energía.\n\n*   **C. Tipografía:**\n    *   **Para Títulos y Logotipo:**\n        *   **Montserrat Bold / Poppins Bold:** Modernas, geométricas, fuertes y muy legibles en digital.\n    *   **Para Cuerpo de Texto:**\n        *   **Open Sans / Lato / Roboto:** Claras, legibles, profesionales y optimizadas para pantallas, ideales para el contenido de la web y comunicaciones.\n\n*   **D. Estilo de Imágenes e Ilustraciones:**\n    *   **Profesional y Minimalista:** Fotografías de alta calidad que muestren tecnología, espacios de trabajo limpios, personas colaborando, o interfaces de usuario bien diseñadas.\n    *   **Ilustraciones Geométricas/Abstractas:** Uso de formas simples, degradados sutiles y líneas limpias para crear gráficos que refuercen la modernidad y la innovación.\n    *   **Mocks-ups de Sitios Web:** Siempre mostrar los proyectos en dispositivos modernos (laptops, tablets, móviles) para enfatizar la adaptabilidad y el diseño responsivo.\n\n---\n\n### Aplicaciones Sugeridas de este Branding:\n\n*   **Sitio Web:** Diseño limpio, responsivo, con navegación intuitiva y ejemplos de portafolio destacados.\n*   **Redes Sociales:** Plantillas coherentes con la paleta de colores y tipografía para posts y banners.\n*   **Material de Marketing:** Tarjetas de presentación, folletos, presentaciones de propuesta (pitch decks) siguiendo la línea visual.\n*   **Email Marketing:** Plantillas de email con el logo, colores y estilo de AMG Web Solutions.\n\n---\n\n¿Qué te parece esta propuesta inicial para AMG Web Solutions? ¿Hay algún aspecto que te gustaría explorar o ajustar más a fondo para esta prueba? ¡Estoy listo para tus comentarios!",
+      "timestamp": "2026-02-24T19:44:20.194Z"
+    },
+    {
+      "id": "mm10mtn2kc4vcbmbj7q",
+      "role": "assistant",
+      "content": "¡He generado tu branding completo con 5 propuestas únicas! Cada propuesta incluye un logo profesional, paleta de 6 colores, 2 tipografías y 6 iconos concordantes. Explora las diferentes propuestas y elige la que mejor represente tu marca.",
+      "timestamp": "2026-02-24T19:45:52.526Z"
+    }
+  ],
+  "branding": {
+    "brandName": "AMG Web Solutions",
+    "tagline": "El futuro de tu marca",
+    "logo": "/api/projects/mm10k624z8d83egdkyh/images/logo_main_1771962352637_ronm6.png",
+    "colors": [
+      {
+        "hex": "#0A2463",
+        "uso": "Base, profesionalismo, profundidad"
+      },
+      {
+        "hex": "#20C997",
+        "uso": "Acento, innovación, frescura, tecnología"
+      },
+      {
+        "hex": "#D3D9DE",
+        "uso": "Fondos claros, estructura, neutralidad"
+      },
+      {
+        "hex": "#343A40",
+        "uso": "Texto principal, contraste, solidez"
+      },
+      {
+        "hex": "#FFFFFF",
+        "uso": "Limpieza, espacios negativos, claridad"
+      },
+      {
+        "hex": "#FF9F1C",
+        "uso": "Llamadas a la acción (CTA), dinamismo, atención"
+      }
+    ],
+    "typography": {
+      "heading": {
+        "name": "Montserrat",
+        "fontFamily": "Montserrat, sans-serif",
+        "usage": "Títulos",
+        "googleFont": "Montserrat"
+      },
+      "body": {
+        "name": "Lato",
+        "fontFamily": "Lato, sans-serif",
+        "usage": "Cuerpo",
+        "googleFont": "Lato"
+      }
+    },
+    "icons": [
+      {
+        "name": "Logo Icon",
+        "svg": "/api/projects/mm10k624z8d83egdkyh/images/icon_main_0_1771962352638_ru1aq.png",
+        "description": "Icono Logo Icon generado"
+      },
+      {
+        "name": "Square Icon",
+        "svg": "/api/projects/mm10k624z8d83egdkyh/images/icon_main_1_1771962352639_y0tfc.png",
+        "description": "Icono Square Icon generado"
+      },
+      {
+        "name": "Symbol",
+        "svg": "/api/projects/mm10k624z8d83egdkyh/images/icon_main_2_1771962352642_dorkk.png",
+        "description": "Icono Symbol generado"
+      },
+      {
+        "name": "App Icon",
+        "svg": "/api/projects/mm10k624z8d83egdkyh/images/icon_main_3_1771962352643_jag84.png",
+        "description": "Icono App Icon generado"
+      },
+      {
+        "name": "Favicon",
+        "svg": "/api/projects/mm10k624z8d83egdkyh/images/icon_main_4_1771962352644_t5e6c.png",
+        "description": "Icono Favicon generado"
+      },
+      {
+        "name": "Badge",
+        "svg": "/api/projects/mm10k624z8d83egdkyh/images/icon_main_5_1771962352645_rixys.png",
+        "description": "Icono Badge generado"
+      }
+    ],
+    "proposals": [
+      {
+        "id": 1,
+        "name": "Propuesta 1",
+        "description": "Diseño para AMG Web Solutions",
+        "colorScheme": [
+          "#0A2463",
+          "#20C997",
+          "#D3D9DE",
+          "#343A40",
+          "#FFFFFF",
+          "#FF9F1C"
+        ],
+        "typography": "Montserrat + Lato",
+        "mood": "moderno",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm10k624z8d83egdkyh/images/logo_prop_0_1771962352646_s2yep.png",
+        "icons": [
+          {
+            "name": "Logo Icon",
+            "svg": "/api/projects/mm10k624z8d83egdkyh/images/icon_prop_0_0_1771962352646_wadqv.png",
+            "description": "Icono Logo Icon generado"
+          },
+          {
+            "name": "Square Icon",
+            "svg": "/api/projects/mm10k624z8d83egdkyh/images/icon_prop_0_1_1771962352647_20ktb.png",
+            "description": "Icono Square Icon generado"
+          },
+          {
+            "name": "Symbol",
+            "svg": "/api/projects/mm10k624z8d83egdkyh/images/icon_prop_0_2_1771962352648_62i85.png",
+            "description": "Icono Symbol generado"
+          },
+          {
+            "name": "App Icon",
+            "svg": "/api/projects/mm10k624z8d83egdkyh/images/icon_prop_0_3_1771962352649_20rbz.png",
+            "description": "Icono App Icon generado"
+          },
+          {
+            "name": "Favicon",
+            "svg": "/api/projects/mm10k624z8d83egdkyh/images/icon_prop_0_4_1771962352651_kz7cf.png",
+            "description": "Icono Favicon generado"
+          },
+          {
+            "name": "Badge",
+            "svg": "/api/projects/mm10k624z8d83egdkyh/images/icon_prop_0_5_1771962352651_bv544.png",
+            "description": "Icono Badge generado"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Propuesta 2",
+        "description": "Diseño para AMG Web Solutions",
+        "colorScheme": [
+          "#2C3E50",
+          "#C0392B",
+          "#A9B2BF",
+          "#5D6D7E",
+          "#F8F9FA",
+          "#FFD700"
+        ],
+        "typography": "Playfair Display + Merriweather",
+        "mood": "moderno",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm10k624z8d83egdkyh/images/logo_prop_1_1771962352652_ztb52.png",
+        "icons": [
+          {
+            "name": "home",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg>",
+            "description": "Icono de home"
+          },
+          {
+            "name": "search",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg>",
+            "description": "Icono de search"
+          },
+          {
+            "name": "user",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg>",
+            "description": "Icono de user"
+          },
+          {
+            "name": "settings",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24\"/></svg>",
+            "description": "Icono de settings"
+          },
+          {
+            "name": "heart",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>",
+            "description": "Icono de heart"
+          },
+          {
+            "name": "star",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+            "description": "Icono de star"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Propuesta 3",
+        "description": "Diseño para AMG Web Solutions",
+        "colorScheme": [
+          "#0A1128",
+          "#FF6F00",
+          "#4CAF50",
+          "#4A4A4A",
+          "#F0F8FF",
+          "#B388FF"
+        ],
+        "typography": "Poppins + Montserrat",
+        "mood": "moderno",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm10k624z8d83egdkyh/images/logo_prop_2_1771962352653_dbxsx.png",
+        "icons": [
+          {
+            "name": "home",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg>",
+            "description": "Icono de home"
+          },
+          {
+            "name": "search",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg>",
+            "description": "Icono de search"
+          },
+          {
+            "name": "user",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg>",
+            "description": "Icono de user"
+          },
+          {
+            "name": "settings",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24\"/></svg>",
+            "description": "Icono de settings"
+          },
+          {
+            "name": "heart",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>",
+            "description": "Icono de heart"
+          },
+          {
+            "name": "star",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+            "description": "Icono de star"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Propuesta 4",
+        "description": "Diseño para AMG Web Solutions",
+        "colorScheme": [
+          "#2C5F2D",
+          "#00BFFF",
+          "#EAEAEA",
+          "#555555",
+          "#FFFFFF",
+          "#FFD700"
+        ],
+        "typography": "Raleway + Noto Sans",
+        "mood": "moderno",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm10k624z8d83egdkyh/images/logo_prop_3_1771962352654_v9a1r.png",
+        "icons": [
+          {
+            "name": "home",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg>",
+            "description": "Icono de home"
+          },
+          {
+            "name": "search",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg>",
+            "description": "Icono de search"
+          },
+          {
+            "name": "user",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg>",
+            "description": "Icono de user"
+          },
+          {
+            "name": "settings",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24\"/></svg>",
+            "description": "Icono de settings"
+          },
+          {
+            "name": "heart",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>",
+            "description": "Icono de heart"
+          },
+          {
+            "name": "star",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+            "description": "Icono de star"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Propuesta 5",
+        "description": "Diseño para AMG Web Solutions",
+        "colorScheme": [
+          "#1B262C",
+          "#0F4C75",
+          "#3282B8",
+          "#BBE1FA",
+          "#E0E0E0",
+          "#FC5185"
+        ],
+        "typography": "Rubik + Source Sans Pro",
+        "mood": "moderno",
+        "applications": [
+          "Website",
+          "Redes sociales",
+          "Tarjetas de presentación",
+          "Email firma",
+          "Empaque"
+        ],
+        "logo": "/api/projects/mm10k624z8d83egdkyh/images/logo_prop_4_1771962352655_wam0a.png",
+        "icons": [
+          {
+            "name": "home",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg>",
+            "description": "Icono de home"
+          },
+          {
+            "name": "search",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg>",
+            "description": "Icono de search"
+          },
+          {
+            "name": "user",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg>",
+            "description": "Icono de user"
+          },
+          {
+            "name": "settings",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24\"/></svg>",
+            "description": "Icono de settings"
+          },
+          {
+            "name": "heart",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>",
+            "description": "Icono de heart"
+          },
+          {
+            "name": "star",
+            "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+            "description": "Icono de star"
+          }
+        ]
+      }
+    ]
+  }
+}

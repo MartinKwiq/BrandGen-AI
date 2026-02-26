@@ -1,0 +1,278 @@
+{
+  "id": "mm3pelvdwb27j2nma",
+  "name": "Maria Carolina Leyva Gonzalez",
+  "description": "Diseñadora gráfica",
+  "createdAt": "2026-02-26T16:54:51.961Z",
+  "updatedAt": "2026-02-26T17:46:45.714Z",
+  "status": "completed",
+  "messages": [
+    {
+      "id": "mm3pelvd3sgxw0u2yax",
+      "role": "assistant",
+      "content": "¡Hola! Soy BrandGen AI, tu consultor de branding. He creado el proyecto \"Maria Carolina Leyva Gonzalez\" basándome en tu descripción. Para empezar a diseñar tu identidad ideal, cuéntame un poco más sobre el propósito principal de tu negocio. ¿Qué es lo que quieres lograr con esta marca?",
+      "timestamp": "2026-02-26T16:54:51.961Z"
+    },
+    {
+      "id": "mm3r7scqoblezz4oy6q",
+      "role": "user",
+      "content": "Posicionar mi marca De manera digital Necesito crear un brinding para mi página web",
+      "timestamp": "2026-02-26T17:45:33.002Z"
+    },
+    {
+      "id": "mm3r7yqx6z3imb6l2qn",
+      "role": "assistant",
+      "content": "¡Excelente objetivo, Maria Carolina! Posicionar tu marca digitalmente y crear un branding sólido para tu web son pasos cruciales para destacar y conectar con tu audiencia.\n\nPara empezar a construir ese branding digital que resuene y sea efectivo, necesitamos entender la esencia de lo que quieres proyectar. Esto nos ayudará a definir la dirección visual, el tono de voz y la experiencia general de tu marca en línea.\n\nPor favor, ayúdame respondiendo a estas preguntas clave:\n\n1.  **Core Business / Oferta Principal:** ¿Cuál es el **producto principal** o el **servicio fundamental** que ofrecerás/presentarás en tu página web? (Ej: joyería artesanal, consultoría de marketing, cursos de bienestar, servicios de diseño gráfico, un blog especializado, etc.)\n2.  **Público Objetivo:** ¿Quién es tu **cliente ideal** o la **audiencia principal** a la que quieres llegar con tu web? (Piensa en su edad, intereses, problemas que buscan resolver, nivel socioeconómico, etc.)\n3.  **Diferenciación:** ¿Qué hace que tu oferta sea **única** o **diferente** de otras opciones similares que ya existen en el mercado digital? ¿Cuál es tu propuesta de valor distintiva?\n4.  **Personalidad de Marca / Emoción Deseada:** ¿Cómo quieres que la gente se **sienta** o qué quieres que **piense** cuando visite tu página web y se relacione con tu marca? (Ej: ¿confianza, innovación, cercanía, lujo, diversión, practicidad, inspiración, autoridad?)\n5.  **Objetivo Principal de la Web:** ¿Cuál es la **acción principal** que quieres que los visitantes realicen en tu web? (Ej: comprar un producto, solicitar un servicio, rellenar un formulario de contacto, suscribirse a una newsletter, informarse sobre un tema específico, reservar una cita, etc.)\n\nUna vez tengamos esto claro, podremos empezar a definir la personalidad visual y verbal de tu marca para tu página web. ¡Estoy lista para seguir construyendo contigo!",
+      "timestamp": "2026-02-26T17:45:41.289Z"
+    },
+    {
+      "id": "mm3r86lfqgi4yh8luno",
+      "role": "user",
+      "content": "¿Una pregunta a la vez por favor",
+      "timestamp": "2026-02-26T17:45:51.459Z"
+    },
+    {
+      "id": "mm3r875rp138xiawllk",
+      "role": "assistant",
+      "content": "¿Hay algo más que deba saber sobre tu marca? Por ejemplo, ¿quién es tu público objetivo o qué valores quieres transmitir?",
+      "timestamp": "2026-02-26T17:45:52.191Z"
+    },
+    {
+      "id": "mm3r8ns3ba126qs1odb",
+      "role": "user",
+      "content": "Todo tipo de personas que quieran o necesiten mis servicios de diseño",
+      "timestamp": "2026-02-26T17:46:13.731Z"
+    },
+    {
+      "id": "mm3r8o1k006fa8nph1jct",
+      "role": "assistant",
+      "content": "¿Te gustaría un diseño moderno y minimalista, o prefieres algo más tradicional y elegante?",
+      "timestamp": "2026-02-26T17:46:14.072Z"
+    },
+    {
+      "id": "mm3r8y785nb5outra2g",
+      "role": "user",
+      "content": "Moderno estaría bien para mí y podríamos también tener un poco de elegante",
+      "timestamp": "2026-02-26T17:46:27.236Z"
+    },
+    {
+      "id": "mm3r8yfdrxluc05j1ta",
+      "role": "assistant",
+      "content": "¡Excelente! Con toda esta información podré crear un branding perfecto para ti. ¿Generamos las propuestas?",
+      "timestamp": "2026-02-26T17:46:27.529Z"
+    },
+    {
+      "id": "mm3r9b5827oung3kctu",
+      "role": "user",
+      "content": "Vamos",
+      "timestamp": "2026-02-26T17:46:44.012Z"
+    },
+    {
+      "id": "mm3r9bdbqfjuzxtjek",
+      "role": "assistant",
+      "content": "Tengo toda la información que necesito. ¿Listo para generar tu branding? Haz clic en '✨ Generar Branding'",
+      "timestamp": "2026-02-26T17:46:44.303Z"
+    },
+    {
+      "id": "mm3r9cgifm37jayoels",
+      "role": "assistant",
+      "content": "¡He generado tu branding completo con 5 propuestas únicas! Cada propuesta incluye un logo profesional, paleta de 6 colores, 2 tipografías y 6 iconos concordantes. Explora las diferentes propuestas y elige la que mejor represente tu marca.",
+      "timestamp": "2026-02-26T17:46:45.714Z"
+    }
+  ],
+  "canGenerate": true,
+  "branding": {
+    "brandName": "Maria Carolina Leyva Gonzalez",
+    "tagline": "El futuro de tu marca",
+    "logo": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\">\n    <defs>\n      <linearGradient id=\"grad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">\n        <stop offset=\"0%\" style=\"stop-color:#6366f1\"/>\n        <stop offset=\"100%\" style=\"stop-color:#8b5cf6\"/>\n      </linearGradient>\n    </defs>\n    <rect width=\"200\" height=\"200\" rx=\"40\" fill=\"url(#grad)\"/>\n    <text x=\"100\" y=\"140\" font-family=\"Arial, sans-serif\" font-size=\"100\" font-weight=\"bold\" fill=\"white\" text-anchor=\"middle\">M</text>\n  </svg>",
+    "colors": [
+      {
+        "name": "Primario",
+        "hex": "#6366f1",
+        "usage": "Color principal de marca"
+      },
+      {
+        "name": "Secundario",
+        "hex": "#8b5cf6",
+        "usage": "Elementos de apoyo"
+      },
+      {
+        "name": "Acento",
+        "hex": "#ec4899",
+        "usage": "Llamadas a la acción"
+      },
+      {
+        "name": "Fondo Claro",
+        "hex": "#f9fafb",
+        "usage": "Fondos y backgrounds"
+      },
+      {
+        "name": "Fondo Oscuro",
+        "hex": "#111827",
+        "usage": "Texto sobre fondos oscuros"
+      },
+      {
+        "name": "Soporte",
+        "hex": "#ffffff",
+        "usage": "Tarjetas y contenedores"
+      }
+    ],
+    "typography": {
+      "heading": {
+        "name": "Inter",
+        "fontFamily": "Inter, sans-serif",
+        "usage": "Títulos y encabezados",
+        "googleFont": "Inter"
+      },
+      "body": {
+        "name": "DM Sans",
+        "fontFamily": "DM Sans, sans-serif",
+        "usage": "Texto de párrafos",
+        "googleFont": "DM+Sans"
+      }
+    },
+    "icons": [
+      {
+        "name": "home",
+        "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg>",
+        "description": "Home"
+      },
+      {
+        "name": "search",
+        "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg>",
+        "description": "Search"
+      },
+      {
+        "name": "user",
+        "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg>",
+        "description": "User"
+      },
+      {
+        "name": "settings",
+        "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24\"/></svg>",
+        "description": "Settings"
+      },
+      {
+        "name": "heart",
+        "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>",
+        "description": "Favorite"
+      },
+      {
+        "name": "star",
+        "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+        "description": "Star"
+      }
+    ],
+    "proposals": [
+      {
+        "id": 1,
+        "name": "Innovador Maria Carolina Leyva Gonzalez",
+        "description": "Una propuesta modern que captura la esencia de Maria Carolina Leyva Gonzalez. Diseñadora gráfica",
+        "colorScheme": [
+          "#6366f1",
+          "#8b5cf6",
+          "#ec4899",
+          "#f9fafb",
+          "#111827",
+          "#ffffff"
+        ],
+        "typography": "Inter + DM Sans",
+        "mood": "modern",
+        "applications": [
+          "Website",
+          "Business cards",
+          "Social media",
+          "Email signature"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Tradicional Maria Carolina Leyva Gonzalez",
+        "description": "Una propuesta classic que captura la esencia de Maria Carolina Leyva Gonzalez. Diseñadora gráfica",
+        "colorScheme": [
+          "#6366f1",
+          "#8b5cf6",
+          "#ec4899",
+          "#f9fafb",
+          "#111827",
+          "#ffffff"
+        ],
+        "typography": "Inter + DM Sans",
+        "mood": "classic",
+        "applications": [
+          "Website",
+          "Business cards",
+          "Social media",
+          "Email signature"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Puro Maria Carolina Leyva Gonzalez",
+        "description": "Una propuesta minimalist que captura la esencia de Maria Carolina Leyva Gonzalez. Diseñadora gráfica",
+        "colorScheme": [
+          "#6366f1",
+          "#8b5cf6",
+          "#ec4899",
+          "#f9fafb",
+          "#111827",
+          "#ffffff"
+        ],
+        "typography": "Inter + DM Sans",
+        "mood": "minimalist",
+        "applications": [
+          "Website",
+          "Business cards",
+          "Social media",
+          "Email signature"
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Audaz Maria Carolina Leyva Gonzalez",
+        "description": "Una propuesta bold que captura la esencia de Maria Carolina Leyva Gonzalez. Diseñadora gráfica",
+        "colorScheme": [
+          "#6366f1",
+          "#8b5cf6",
+          "#ec4899",
+          "#f9fafb",
+          "#111827",
+          "#ffffff"
+        ],
+        "typography": "Inter + DM Sans",
+        "mood": "bold",
+        "applications": [
+          "Website",
+          "Business cards",
+          "Social media",
+          "Email signature"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Sofisticado Maria Carolina Leyva Gonzalez",
+        "description": "Una propuesta elegant que captura la esencia de Maria Carolina Leyva Gonzalez. Diseñadora gráfica",
+        "colorScheme": [
+          "#6366f1",
+          "#8b5cf6",
+          "#ec4899",
+          "#f9fafb",
+          "#111827",
+          "#ffffff"
+        ],
+        "typography": "Inter + DM Sans",
+        "mood": "elegant",
+        "applications": [
+          "Website",
+          "Business cards",
+          "Social media",
+          "Email signature"
+        ]
+      }
+    ],
+    "selectedComponents": {
+      "colorProposalId": 1,
+      "moodProposalId": 2,
+      "typographyProposalId": 1
+    }
+  }
+}

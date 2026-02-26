@@ -1,0 +1,82 @@
+﻿[dotenv@17.2.4] injecting env (3) from .env -- tip: ­ƒöÉ prevent committing .env to code: https://dotenvx.com/precommit
+--- REPRODUCIENDO ERROR DE CHAT ---
+Llamando a ai.models.generateContent con systemInstruction (gemini-1.5-flash)...
+node : ÔØî ERROR 
+DETECTADO:
+En línea: 1 Carácter: 
+1
++ node 
+reproduce_error.js 
+2>&1 | Out-File 
+-FilePath 
+reproduce_output.tx 
+...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (ÔØî ERROR    
+ DETECTADO::String    
+) [], RemoteExcep    
+tion
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+Nombre: ApiError
+Mensaje: {"error":{"co
+de":404,"message":"mod
+els/gemini-1.5-flash 
+is not found for API 
+version v1beta, or is 
+not supported for 
+generateContent. Call 
+ListModels to see the 
+list of available 
+models and their 
+supported methods.","s
+tatus":"NOT_FOUND"}}
+Stack: ApiError: {"err
+or":{"code":404,"messa
+ge":"models/gemini-1.5
+-flash is not found 
+for API version 
+v1beta, or is not 
+supported for 
+generateContent. Call 
+ListModels to see the 
+list of available 
+models and their 
+supported methods.","s
+tatus":"NOT_FOUND"}}
+    at 
+throwErrorIfNotOK (fil
+e:///C:/Users/USER/Des
+ktop/Proyectos/BrandGe
+n%20AI/backend/node_mo
+dules/@google/genai/di
+st/node/index.mjs:1217
+2:30)
+    at process.process
+TicksAndRejections (no
+de:internal/process/ta
+sk_queues:103:5)
+    at async file:///C
+:/Users/USER/Desktop/P
+royectos/BrandGen%20AI
+/backend/node_modules/
+@google/genai/dist/nod
+e/index.mjs:11892:13
+    at async Models.ge
+nerateContent (file://
+/C:/Users/USER/Desktop
+/Proyectos/BrandGen%20
+AI/backend/node_module
+s/@google/genai/dist/n
+ode/index.mjs:13235:24
+)
+    at async testChat 
+(file:///C:/Users/USER
+/Desktop/Proyectos/Bra
+ndGen%20AI/backend/rep
+roduce_error.js:35:26)

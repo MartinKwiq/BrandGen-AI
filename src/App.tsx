@@ -28,7 +28,7 @@ function AppContent() {
       return defaultSettings;
     }
   });
-  
+
   const {
     projects,
     currentProject,
@@ -87,14 +87,12 @@ function AppContent() {
 
   // Render AI status indicator
   const renderAIStatus = () => (
-    <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium ${
-      aiStatus 
-        ? 'bg-green-100 text-green-700' 
-        : 'bg-yellow-100 text-yellow-700'
-    }`}>
-      <span className={`w-2 h-2 rounded-full ${
-        aiStatus ? 'bg-green-500' : 'bg-yellow-500'
-      }`}></span>
+    <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium ${aiStatus
+      ? 'bg-green-100 text-green-700'
+      : 'bg-yellow-100 text-yellow-700'
+      }`}>
+      <span className={`w-2 h-2 rounded-full ${aiStatus ? 'bg-green-500' : 'bg-yellow-500'
+        }`}></span>
       {aiStatus ? 'IA Activa' : 'IA Sin configurar'}
     </div>
   );
@@ -125,7 +123,7 @@ function AppContent() {
           Nuevo Proyecto
         </button>
       </div>
-      
+
       <div className="flex-1 overflow-y-auto p-4 scrollbar-thin">
         <ProjectList
           projects={projects}
@@ -138,9 +136,8 @@ function AppContent() {
       <div className="p-4 border-t border-slate-200 bg-slate-50">
         <button
           onClick={() => setView('settings')}
-          className={`w-full px-4 py-3 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 ${
-            view === 'settings' ? 'bg-violet-100 text-violet-700' : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
-          }`}
+          className={`w-full px-4 py-3 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 ${view === 'settings' ? 'bg-violet-100 text-violet-700' : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
+            }`}
         >
           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <circle cx="12" cy="12" r="3" />
@@ -181,7 +178,10 @@ function AppContent() {
     if (view === 'guide' && currentProject.branding) {
       return (
         <div className="h-full overflow-y-auto scrollbar-thin">
-          <BrandGuide branding={currentProject.branding} />
+          <BrandGuide
+            branding={currentProject.branding}
+            projectId={currentProject.id}
+          />
         </div>
       );
     }
@@ -201,27 +201,6 @@ function AppContent() {
                 {renderAIStatus()}
               </div>
               <div className="flex items-center gap-3">
-                {currentProject.status === 'draft' && (
-                  <button
-                    onClick={handleGenerateBranding}
-                    disabled={isGenerating}
-                    className="px-6 py-2.5 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 disabled:from-slate-400 disabled:to-slate-400 text-white rounded-xl font-medium transition-all shadow-lg shadow-violet-200 hover:shadow-xl flex items-center gap-2"
-                  >
-                    {isGenerating ? (
-                      <>
-                        <svg className="w-5 h-5 animate-spin" viewBox="0 0 24 24" fill="none">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                        </svg>
-                        Generando...
-                      </>
-                    ) : (
-                      <>
-                        ✨ Generar Branding
-                      </>
-                    )}
-                  </button>
-                )}
                 {currentProject.branding && (
                   <button
                     onClick={() => setView('guide')}
@@ -249,7 +228,7 @@ function AppContent() {
                   <p className="text-sm text-yellow-800 font-medium">API Key no configurada</p>
                   <p className="text-xs text-yellow-700 mt-1">
                     Para generar logos e iconos profesionales, configura tu API Key de Google AI Studio en{' '}
-                    <button 
+                    <button
                       onClick={() => setView('settings')}
                       className="underline font-medium hover:text-yellow-900"
                     >
@@ -267,7 +246,10 @@ function AppContent() {
               messages={currentProject.messages}
               onSendMessage={sendMessage}
               isLoading={isLoading}
-              disabled={currentProject.status === 'completed'}
+              onGenerate={handleGenerateBranding}
+              isGenerating={isGenerating}
+              canGenerate={currentProject.canGenerate}
+              disabled={currentProject.status === 'completed' || currentProject.status === 'generating'}
               aiReady={aiStatus}
             />
           </div>
@@ -276,14 +258,14 @@ function AppContent() {
         {/* Sidebar with project info */}
         <div className="w-80 bg-white border-l border-slate-200 p-4 overflow-y-auto scrollbar-thin">
           <h3 className="font-semibold text-slate-900 mb-4">Información del Proyecto</h3>
-          
+
           <div className="space-y-4">
             <div className="p-4 bg-slate-50 rounded-xl">
               <p className="text-xs text-slate-500 uppercase tracking-wide mb-1">Estado</p>
               <p className="font-medium text-slate-900 capitalize">
                 {currentProject.status === 'draft' ? 'Borrador' :
-                 currentProject.status === 'generating' ? 'Generando' :
-                 currentProject.status === 'completed' ? 'Completado' : 'Exportado'}
+                  currentProject.status === 'generating' ? 'Generando' :
+                    currentProject.status === 'completed' ? 'Completado' : 'Exportado'}
               </p>
             </div>
 
