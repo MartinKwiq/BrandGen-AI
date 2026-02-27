@@ -23,7 +23,21 @@ if (!GEMINI_API_KEY) {
 const app = express();
 const PORT = 5000;
 
-app.use(cors());
+const allowedOrigins = [
+    'http://localhost:5173', // Local Vite
+    process.env.FRONTEND_URL  // URL de Vercel configurada en Producción
+].filter(Boolean);
+
+app.use(cors({
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('No permitido por CORS'));
+        }
+    },
+    credentials: true
+}));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 

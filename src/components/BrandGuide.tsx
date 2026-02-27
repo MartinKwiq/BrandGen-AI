@@ -11,7 +11,7 @@ interface BrandGuideProps {
   projectId?: string;
 }
 
-const BACKEND_URL = 'http://localhost:5000';
+const BACKEND_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 export function BrandGuide({ branding, projectId }: BrandGuideProps) {
   const { currentProject, updateProject } = useBrand();

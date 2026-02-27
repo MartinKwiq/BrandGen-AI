@@ -1,7 +1,8 @@
 import type { BrandProject, BrandBranding, BrandProposal, BrandColor, BrandIcon } from '../types';
 
 // API Configuration
-const BASE_URL = 'http://localhost:5000/api';
+// Usar URL de Vercel en Producción, o localhost en desarrollo
+const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 const BACKEND_URL = `${BASE_URL}/generate`;
 
 // Helper to call backend API
