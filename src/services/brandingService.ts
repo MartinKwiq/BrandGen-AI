@@ -1,4 +1,4 @@
-import type { BrandProject, BrandBranding, BrandProposal, BrandColor, BrandIcon } from '../types';
+import type { BrandProject, BrandBranding, BrandProposal, BrandColor, BrandIcon, Message } from '../types';
 
 // API Configuration
 // Usar URL de Vercel en Producción, o localhost en desarrollo
@@ -537,6 +537,31 @@ function generateTagline(brandName: string, _description: string): string {
 }
 
 // ===== PROJECT MANAGEMENT (Via Backend) =====
+export async function sendMessage(content: string, contextId: string = "default"): Promise<Message> {
+  console.log(`💬 Enviando mensaje al backend... (Contexto: ${contextId})`);
+
+  try {
+    const response = await fetch(`${BASE_URL}/chat`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: content, contextId }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    // Assuming the backend returns a Message object
+    const messageResponse = await response.json();
+    console.log('✅ Message sent and response received:', messageResponse);
+    return messageResponse; // Return the actual message response
+  } catch (error) {
+    console.error('❌ Error sending message to backend:', error);
+    // Fallback or error handling for sendMessage
+    throw error; // Re-throw to indicate failure
+  }
+}
+
 export async function saveProject(project: BrandProject): Promise<void> {
   try {
     const response = await fetch(`${BASE_URL}/projects`, {
